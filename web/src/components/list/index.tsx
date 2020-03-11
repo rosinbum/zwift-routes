@@ -1,7 +1,7 @@
 import React from 'react';
 import ZwiftRoute from 'models/ZwiftRoute';
 
-interface ListViewProps {
+export interface ListRoutesProps {
   /**
    * The list of routes to display.
    */
@@ -17,12 +17,12 @@ interface ListViewProps {
  * Pure component to display the list of routes.
  * @param props component properties
  */
-const ListView: React.SFC<ListViewProps> = (props) => {
+const ListRoutesView: React.SFC<ListRoutesProps> = (props) => {
   return (
     <div className="listView">
-      <p>{JSON.stringify(props.routes, null, 2)}</p>
+      <pre>{JSON.stringify(props.routes, null, 2)}</pre>
     </div>
   );
 };
 
-export default ListView;
+export default ListRoutesView;
