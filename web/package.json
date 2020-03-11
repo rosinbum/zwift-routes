@@ -1,0 +1,59 @@
+{
+  "name": "web",
+  "version": "0.1.0",
+  "homepage": "https://adrianhall.github.io/zwift-routes",
+  "license": "MIT",
+  "private": true,
+  "author": {
+    "name": "Adrian Hall",
+    "email": "photoadrian@outlook.com",
+    "url": "https://adrianhall.github.io"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "bugs": {
+    "url": "https://github.com/adrianhall/zwift-routes/issues"
+  },
+  "contributors": [
+    "Adrian Hall <photoadrian@outlook.com>"
+  ],
+  "dependencies": {
+    "@types/node": "^12.12.29",
+    "@types/react": "^16.9.23",
+    "@types/react-dom": "^16.9.5",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "react-scripts": "3.4.0",
+    "typescript": "^3.7.5"
+  },
+  "devDependencies": {    
+    "gh-pages": "^2.2.0",
+    "npm-run-all": "^4.1.5"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adrianhall/zwift-routes.git",
+    "directory": "web"
+  },
+  "scripts": {
+    "predeploy": "run-s lint build",
+    "deploy": "gh-pages -d build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  }
+}
