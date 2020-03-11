@@ -1,12 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import MainApplication from 'pages';
+import './index.scss';
 import * as serviceWorker from './serviceWorker';
 
 const Application = () => (
-  <div className="fullPage">
-    <h1>In the application</h1>
-  </div>
+  <React.Fragment>
+    <CssBaseline />
+    <MainApplication />
+  </React.Fragment>
 );
 
 ReactDOM.render(<Application />, document.getElementById('root'));
