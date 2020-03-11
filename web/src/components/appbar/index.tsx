@@ -7,7 +7,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import useStyles from './stylesheet';
 
-interface AppBarProps {
+export interface ApplicationBarProps {
   /**
    * The left icon to display
    */
@@ -28,7 +28,7 @@ interface AppBarProps {
  * The top Application Bar
  * @param props component properties
  */
-const ApplicationBar: React.SFC<AppBarProps> = (props) => {
+const ApplicationBar: React.SFC<ApplicationBarProps> = (props) => {
   const style = useStyles();
 
   let leftIconComponent = <div className={style.emptyIcon}/>;
@@ -48,7 +48,7 @@ const ApplicationBar: React.SFC<AppBarProps> = (props) => {
   }
 
   return (
-    <AppBar>
+    <AppBar position="relative">
       <Toolbar>
         {leftIconComponent}
         <Typography variant="h6" className={style.title}>

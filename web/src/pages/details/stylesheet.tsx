@@ -1,11 +1,9 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 /**
- * Stylesheet for the main application.  This implements a full-page
- * flexbox with a main section that "grows" and scrolls the content
- * vertically.
+ * Stylesheet for the detailed route page
  */
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
     flexFlow: 'column nowrap',
@@ -17,11 +15,11 @@ const useStyles = makeStyles({
     top: 0,
     width: '100%'
   },
-  mainSection: {
+  content: {
     display: 'block',
     flexGrow: 1,
     overflowY: 'scroll'
   }
-});
+}));
 
 export default useStyles;
