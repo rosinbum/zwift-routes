@@ -8,6 +8,11 @@ interface ZwiftRoute {
   readonly id: string,
 
   /**
+   * Difficulty of the route
+   */
+  readonly difficulty: number,
+  
+  /**
    * Determines if the route is completed or not.
    */
   readonly isCompleted: boolean,

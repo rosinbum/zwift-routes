@@ -1,5 +1,7 @@
 import React from 'react';
+import List from '@material-ui/core/List';
 import ZwiftRoute from 'models/ZwiftRoute';
+import RouteListItem from './RouteListItem';
 
 export interface ListRoutesProps {
   /**
@@ -18,10 +20,21 @@ export interface ListRoutesProps {
  * @param props component properties
  */
 const ListRoutesView: React.SFC<ListRoutesProps> = (props) => {
+  /**
+   * Event handler to process a click on the row.
+   * 
+   * @param route the route that was clicked
+   */
+  const onClick = (route: ZwiftRoute) => () => {
+    props.onSelectRoute(route);
+  };
+
   return (
-    <div className="listView">
-      <pre>{JSON.stringify(props.routes, null, 2)}</pre>
-    </div>
+    <List>
+      {props.routes.map((r) => (
+        <RouteListItem key={r.id} onClick={onClick(r)} route={r} />
+        ))}
+    </List>
   );
 };
 

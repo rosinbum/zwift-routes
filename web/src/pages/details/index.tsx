@@ -1,12 +1,14 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import ApplicationBar, { ApplicationBarProps} from 'components/appbar';
 import useStyles from './stylesheet';
 
 const DetailedRoutePage = () => {
   const style = useStyles();
+  const history = useHistory();
 
   const onLeftIconPressed = () => {
-    console.log('Back icon pressed');
+    history.goBack();
   };
 
   const applicationBarProps: ApplicationBarProps = {

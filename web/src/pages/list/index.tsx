@@ -6,6 +6,11 @@ import ListRoutes, { ListRoutesProps } from 'components/list';
 import ZwiftRoute from 'models/ZwiftRoute';
 import useStyles from './stylesheet';
 
+/** 
+ * A react component hooked into Redux and React Router that displays
+ * a list of routes.  If a user clicks on a route within the list, they
+ * are taken to the detailed view for that route.
+ */
 const ListRoutesPage = () => {
   const style = useStyles();
   const history = useHistory();
@@ -28,7 +33,9 @@ const ListRoutesPage = () => {
   };
 
   const listRoutesProps: ListRoutesProps = {
-    routes: [{ id: "1", name: "Test", isCompleted: false }],
+    routes: [
+      { id: "1", difficulty: 3.98, name: "Test", isCompleted: false }
+    ],
     onSelectRoute
   };
 
