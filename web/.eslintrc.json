@@ -24,6 +24,7 @@
     "rules": {
         "comma-dangle": [ "error", "never" ],
         "import/prefer-default-export": [ "off" ],
+        "linebreak-style": [ "off" ],
         "react/jsx-props-no-spreading": [ "off" ]
     }
 }

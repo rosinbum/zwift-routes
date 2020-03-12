@@ -146,6 +146,13 @@ export default class ZwiftRoute {
   }
 
   /**
+   * The type of sports that can be ridden on this route
+   */
+  get zwiftSport() {
+    return this.data.sports;
+  }
+
+  /**
    * @return the Zwift world where this route is located.
    */
   get zwiftWorld() {
@@ -164,5 +171,43 @@ export default class ZwiftRoute {
       this.hasCompletedRoute = routeUpdate.isCompleted;
     }
     return this;
+  }
+
+  /**
+   * Returns true if the current route fits the settings.
+   *
+   * @param {Object} settings
+   * @param {string} settings.filter_world world name or '*'
+   * @param {boolean} settings.include_watopia also include watopia
+   * @returns true if the route fits the filters.
+   */
+  fitsFilters(settings) {
+    if (settings.filter_world !== '*') {
+      const listOfWorlds = [settings.filter_world];
+      if (settings.include_watopia) {
+        listOfWorlds.push('Watopia');
+      }
+      if (!listOfWorlds.includes(this.zwiftWorld)) {
+        return false;
+      }
+    }
+
+    if (!settings.include_completed && this.isCompleted) {
+      return false;
+    }
+
+    if (!settings.include_eventonly && this.isEventOnly) {
+      return false;
+    }
+
+    if (settings.filter_sport === 'cycling' && !this.isForCycling) {
+      return false;
+    }
+    if (settings.filter_sport === 'running' && !this.isForRunning) {
+      return false;
+    }
+
+    // If we haven't been filtered out, we are in!
+    return true;
   }
 }

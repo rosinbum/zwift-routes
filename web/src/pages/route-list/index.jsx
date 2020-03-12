@@ -4,6 +4,8 @@ import { useHistory } from 'react-router-dom';
 import Drawer from '@material-ui/core/Drawer';
 import { ApplicationBar } from '../../components';
 import RouteList from './RouteList';
+import SettingsForm from '../settings';
+import { sortComparator } from '../settings/sortFields';
 import useStyles from './stylesheet';
 
 const RouteListPage = () => {
@@ -11,6 +13,10 @@ const RouteListPage = () => {
   const history = useHistory();
   const [drawer, setDrawer] = React.useState(false);
   const routes = useSelector((state) => state.routes);
+  const settings = useSelector((state) => state.settings);
+  const filteredRoutes = routes
+    .filter((route) => route.fitsFilters(settings))
+    .sort(sortComparator(settings.sort_field));
 
   /**
    * Event handler to show or hide the drawer.
@@ -34,10 +40,10 @@ const RouteListPage = () => {
         title="Zwift Routes"
       />
       <div className={style.content}>
-        <RouteList routes={routes} onSelectRoute={onSelectRoute} />
+        <RouteList routes={filteredRoutes} onSelectRoute={onSelectRoute} />
       </div>
       <Drawer anchor="left" open={drawer} onClose={setDrawerVisibility(false)}>
-        <div style={{ minWidth: '300px' }} />
+        <SettingsForm />
       </Drawer>
     </div>
   );
