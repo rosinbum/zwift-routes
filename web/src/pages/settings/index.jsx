@@ -56,7 +56,7 @@ const SettingsForm = () => {
           value={settings.filter_sport}
         />
       </FormGroup>
-      <AppBar position="relative" className={style.secondTitle}>
+      <AppBar position="relative">
         <Toolbar>
           <Typography variant="h6" className={style.title}>Settings</Typography>
         </Toolbar>

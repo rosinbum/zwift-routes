@@ -9,13 +9,10 @@ const useStyles = makeStyles((theme) => ({
     minWidth: 120
   },
   formGroup: {
-    marginTop: theme.spacing(1)
+    margin: theme.spacing(1)
   },
   root: {
     minWidth: '15rem'
-  },
-  secondTitle: {
-    marginTop: theme.spacing(1)
   },
   title: {
     color: theme.palette.primary.contrastText,
