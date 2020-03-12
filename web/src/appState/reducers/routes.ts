@@ -1,27 +1,30 @@
 import RouteUpdates from 'models/RouteUpdates';
 import ZwiftRoute, { ZwiftRouteImpl, ZwiftRouteInput } from 'models/ZwiftRoute';
 
-const LOAD_ROUTES  = 'routes.load';
-const UPDATE_ROUTE = 'route.update';
+export const LOAD_ROUTES  = 'routes.load';
+export const UPDATE_ROUTE = 'route.update';
 
 /**
  * The Action Type for the LOAD_ROUTES action.
  */
-export interface LoadRoutesAction {
+interface LoadRoutesAction {
   type: string,
-  payload: ZwiftRouteInput[]
+  routes: ZwiftRouteInput[]
 }
 
 /**
  * The Action Type for the UPDATE_ROUTE action.
  */
-export interface UpdateRouteAction {
+interface UpdateRouteAction {
   type: string,
   routeId: string,
   payload: RouteUpdates
 }
 
-type RouteAction = LoadRoutesAction | UpdateRouteAction;
+/**
+ * The combined type for all actions hanlded by the Route module.
+ */
+export type RouteAction = LoadRoutesAction | UpdateRouteAction;
 
 /**
  * The list of initial routes.
@@ -38,7 +41,7 @@ const reducer = (state: ZwiftRoute[] = initialState, action: RouteAction) => {
   switch (action.type) {
     case LOAD_ROUTES: 
       {
-        const payload = (action as LoadRoutesAction).payload;
+        const payload = (action as LoadRoutesAction).routes;
         return payload.map(route => new ZwiftRouteImpl(route));
       }
     case UPDATE_ROUTE:
