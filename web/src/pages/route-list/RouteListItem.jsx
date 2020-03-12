@@ -31,7 +31,7 @@ const RouteListItem = ({ displayUnits, onClick, route }) => {
 };
 
 RouteListItem.propTypes = {
-  displayUnits: PropTypes.oneOf(['imperial','metric']),
+  displayUnits: PropTypes.oneOf(['imperial', 'metric']),
   onClick: PropTypes.func.isRequired,
   route: PropTypes.shape(ZwiftRoutePropTypes).isRequired
 };

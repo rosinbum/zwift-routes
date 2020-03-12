@@ -5,7 +5,7 @@ import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import Select from '@material-ui/core/Select';
 import useStyles from './stylesheet';
-import { supportedSortFields } from './sortFields.js';
+import { supportedSortFields } from './sortFields';
 
 const SortFieldSetting = ({ onSettingsChanged, value }) => {
   const style = useStyles();
