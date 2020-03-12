@@ -30,7 +30,7 @@ const SettingsForm = () => {
           <Typography variant="h6" className={style.title}>Filters</Typography>
         </Toolbar>
       </AppBar>
-      <FormGroup>
+      <FormGroup className={style.formGroup}>
         <ZwiftWorldFilter
           onSettingsChanged={(v) => changeSettings({ filter_world: v })}
           value={settings.filter_world}
@@ -61,7 +61,7 @@ const SettingsForm = () => {
           <Typography variant="h6" className={style.title}>Settings</Typography>
         </Toolbar>
       </AppBar>
-      <FormGroup>
+      <FormGroup className={style.formGroup}>
         <SortFieldSetting
           onSettingsChanged={(v) => changeSettings({ sort_field: v })}
           value={settings.sort_field}

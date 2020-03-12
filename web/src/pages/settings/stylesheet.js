@@ -8,6 +8,9 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(1),
     minWidth: 120
   },
+  formGroup: {
+    marginTop: theme.spacing(1)
+  },
   root: {
     minWidth: '15rem'
   },
