@@ -4,7 +4,7 @@ import List from '@material-ui/core/List';
 import RouteListItem from './RouteListItem';
 import { ZwiftRoutePropTypes } from '../../app-state/models/ZwiftRoute';
 
-const RouteList = ({ routes, onSelectRoute }) => {
+const RouteList = ({ displayUnits, routes, onSelectRoute }) => {
   /**
    * Event handler to display the Zwift Route details.
    *
@@ -14,17 +14,29 @@ const RouteList = ({ routes, onSelectRoute }) => {
 
   return (
     <List>
-      {routes.map((r) => (<RouteListItem key={r.id} onClick={onClick(r)} route={r} />))}
+      {routes.map((route) => (
+        <RouteListItem
+          key={route.id}
+          displayUnits={displayUnits}
+          onClick={onClick(route)}
+          route={route}
+        />
+      ))}
     </List>
   );
 };
 
 // TODO: Adjust PropTypes.array to PropTypes.arrayOf(ZwiftRoute)
 RouteList.propTypes = {
+  displayUnits: PropTypes.oneOf(['imperial', 'metric']),
   routes: PropTypes.arrayOf(
     PropTypes.shape(ZwiftRoutePropTypes)
   ).isRequired,
   onSelectRoute: PropTypes.func.isRequired
+};
+
+RouteList.defaultProps = {
+  displayUnits: 'metric'
 };
 
 export default RouteList;

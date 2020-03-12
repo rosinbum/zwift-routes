@@ -40,7 +40,11 @@ const RouteListPage = () => {
         title="Zwift Routes"
       />
       <div className={style.content}>
-        <RouteList routes={filteredRoutes} onSelectRoute={onSelectRoute} />
+        <RouteList
+          displayUnits={settings.display_units}
+          routes={filteredRoutes}
+          onSelectRoute={onSelectRoute}
+        />
       </div>
       <Drawer anchor="left" open={drawer} onClose={setDrawerVisibility(false)}>
         <SettingsForm />

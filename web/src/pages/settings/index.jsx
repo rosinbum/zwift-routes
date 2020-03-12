@@ -5,12 +5,13 @@ import AppBar from '@material-ui/core/AppBar';
 import FormGroup from '@material-ui/core/FormGroup';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
+import DisplayUnitsSetting from './DisplayUnitsSetting';
 import IncludeFilter from './IncludeFilter';
+import SortFieldSetting from './SortFieldSetting';
+import ZwiftSportFilter from './ZwiftSportFilter';
 import ZwiftWorldFilter from './ZwiftWorldFilter';
 import useStyles from './stylesheet';
 import { updateSettings } from '../../app-state/actions';
-import ZwiftSportFilter from './ZwiftSportFilter';
-import SortFieldSetting from './SortFieldSetting';
 
 const SettingsForm = () => {
   const style = useStyles();
@@ -65,6 +66,10 @@ const SettingsForm = () => {
         <SortFieldSetting
           onSettingsChanged={(v) => changeSettings({ sort_field: v })}
           value={settings.sort_field}
+        />
+        <DisplayUnitsSetting
+          onSettingsChanged={(v) => changeSettings({ display_units: v })}
+          value={settings.display_units}
         />
       </FormGroup>
     </div>
