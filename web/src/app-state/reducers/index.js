@@ -1,8 +1,6 @@
 import { combineReducers } from 'redux';
 import routeReducer from './routes';
 
-const appReducer = combineReducers({
+export default combineReducers({
   routes: routeReducer
 });
-
-export default appReducer;

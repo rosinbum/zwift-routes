@@ -1,9 +1,9 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 /**
- * Stylesheet for the list routes page
+ * Stylesheet for the detailed route page
  */
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles({
   root: {
     display: 'flex',
     flexFlow: 'column nowrap',
@@ -20,6 +20,6 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     overflowY: 'scroll'
   }
-}));
+});
 
 export default useStyles;

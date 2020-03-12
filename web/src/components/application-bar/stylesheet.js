@@ -1,7 +1,7 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 /**
- * Stylesheet for the application bar.
+ * Style sheet in the application bar.
  */
 const useStyles = makeStyles((theme) => ({
   emptyIcon: {

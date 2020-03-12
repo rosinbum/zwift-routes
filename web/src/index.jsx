@@ -2,18 +2,19 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import MainApplication from 'pages';
-import reduxStore from './appState/store';
-import './index.scss';
+import { MainApplication } from './pages';
+import store from './app-state/store';
+import './index.css';
 import * as serviceWorker from './serviceWorker';
 
 const Application = () => (
-  <Provider store={reduxStore}>
-    <React.Fragment>
+  <Provider store={store}>
+    <>
       <CssBaseline />
       <MainApplication />
-    </React.Fragment>
-  </Provider> 
+    </>
+  </Provider>
+
 );
 
 ReactDOM.render(<Application />, document.getElementById('root'));
