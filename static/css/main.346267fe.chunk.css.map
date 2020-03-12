@@ -1,1 +1,0 @@
-{"version":3,"sources":["index.scss"],"names":[],"mappings":"AAAA,gCAIE,WAAY,CACZ,MAAO,CACP,QAAS,CACT,SAAU,CACV,iBAAkB,CAClB,KAAM,CACN,UAAW","file":"main.346267fe.chunk.css","sourcesContent":["html,\nbody,\ndiv#root,\ndiv.fullPage {\n  height: 100%;\n  left: 0;\n  margin: 0;\n  padding: 0;\n  position: absolute;\n  top: 0;\n  width: 100%;\n}"]}

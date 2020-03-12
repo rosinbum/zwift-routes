@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/zwift-routes/static/css/main.346267fe.chunk.css",
-    "main.js": "/zwift-routes/static/js/main.72ff44ae.chunk.js",
-    "main.js.map": "/zwift-routes/static/js/main.72ff44ae.chunk.js.map",
-    "runtime-main.js": "/zwift-routes/static/js/runtime-main.995b2ce7.js",
-    "runtime-main.js.map": "/zwift-routes/static/js/runtime-main.995b2ce7.js.map",
-    "static/js/2.8b5815e6.chunk.js": "/zwift-routes/static/js/2.8b5815e6.chunk.js",
-    "static/js/2.8b5815e6.chunk.js.map": "/zwift-routes/static/js/2.8b5815e6.chunk.js.map",
+    "main.css": "/zwift-routes/static/css/main.8cb5bd93.chunk.css",
+    "main.js": "/zwift-routes/static/js/main.e29854a9.chunk.js",
+    "main.js.map": "/zwift-routes/static/js/main.e29854a9.chunk.js.map",
+    "runtime-main.js": "/zwift-routes/static/js/runtime-main.57935fb7.js",
+    "runtime-main.js.map": "/zwift-routes/static/js/runtime-main.57935fb7.js.map",
+    "static/js/2.43112245.chunk.js": "/zwift-routes/static/js/2.43112245.chunk.js",
+    "static/js/2.43112245.chunk.js.map": "/zwift-routes/static/js/2.43112245.chunk.js.map",
     "index.html": "/zwift-routes/index.html",
-    "precache-manifest.22716852a7a203318bdf689ab3c73cfa.js": "/zwift-routes/precache-manifest.22716852a7a203318bdf689ab3c73cfa.js",
+    "precache-manifest.6322f33f490212229d0ac2968b70f2d4.js": "/zwift-routes/precache-manifest.6322f33f490212229d0ac2968b70f2d4.js",
     "service-worker.js": "/zwift-routes/service-worker.js",
-    "static/css/main.346267fe.chunk.css.map": "/zwift-routes/static/css/main.346267fe.chunk.css.map",
-    "static/js/2.8b5815e6.chunk.js.LICENSE.txt": "/zwift-routes/static/js/2.8b5815e6.chunk.js.LICENSE.txt"
+    "static/css/main.8cb5bd93.chunk.css.map": "/zwift-routes/static/css/main.8cb5bd93.chunk.css.map",
+    "static/js/2.43112245.chunk.js.LICENSE.txt": "/zwift-routes/static/js/2.43112245.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.995b2ce7.js",
-    "static/js/2.8b5815e6.chunk.js",
-    "static/css/main.346267fe.chunk.css",
-    "static/js/main.72ff44ae.chunk.js"
+    "static/js/runtime-main.57935fb7.js",
+    "static/js/2.43112245.chunk.js",
+    "static/css/main.8cb5bd93.chunk.css",
+    "static/js/main.e29854a9.chunk.js"
   ]
 }
