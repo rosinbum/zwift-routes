@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/zwift-routes/precache-manifest.f8e50823eb1191b34a67b5958f134732.js"
+  "/zwift-routes/precache-manifest.838a3885dbf1202e81d3ed7580bfc8bb.js"
 );
 
 self.addEventListener('message', (event) => {
