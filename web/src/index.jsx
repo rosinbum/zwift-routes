@@ -1,18 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
+import { PersistGate } from 'redux-persist/integration/react';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import { MainApplication } from './pages';
-import store from './app-state/store';
+import { Loading, MainApplication } from './pages';
+import store, { persistor } from './app-state/store';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
 
 const Application = () => (
   <Provider store={store}>
-    <>
-      <CssBaseline />
-      <MainApplication />
-    </>
+    <PersistGate loading={<Loading />} persistor={persistor}>
+      <>
+        <CssBaseline />
+        <MainApplication />
+      </>
+    </PersistGate>
   </Provider>
 
 );
