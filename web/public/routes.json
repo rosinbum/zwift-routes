@@ -190,7 +190,7 @@
       "leadin_distance": 0,
       "leadin_elevation": 0,
       "sports": "all",
-      "local": 10,
+      "level": 10,
       "eventonly": false,
       "link": "https://zwiftinsider.com/road-to-ruins/",
       "id": "acc00dbd-cc28-4805-9eb3-8ba29a9cb308"
@@ -204,7 +204,7 @@
       "leadin_distance": 5.5,
       "leadin_elevation": 9,
       "sports": "all",
-      "local": 10,
+      "level": 10,
       "eventonly": false,
       "link": "https://zwiftinsider.com/jungle-circuit/",
       "id": "41523cec-7e73-49c1-9f66-806b078eccbe"
@@ -217,7 +217,7 @@
       "leadin_distance": 6.2,
       "leadin_elevation": 23,
       "sports": "all",
-      "local": 10,
+      "level": 10,
       "eventonly": true,
       "id": "ca2be7c6-48f6-436f-8988-ac9b1e8fa50c",
       "difficulty": 0
@@ -231,7 +231,7 @@
       "leadin_distance": 3.9,
       "leadin_elevation": 30,
       "sports": "all",
-      "local": 10,
+      "level": 10,
       "eventonly": false,
       "link": "https://zwiftinsider.com/mega-pretzel/",
       "id": "6be2530b-c30c-46b8-8921-60edafcdd231"
@@ -245,7 +245,7 @@
       "leadin_distance": 2.6,
       "leadin_elevation": 19,
       "sports": "all",
-      "local": 12,
+      "level": 12,
       "eventonly": false,
       "link": "https://zwiftinsider.com/tour-of-fire-and-ice/",
       "id": "715a8203-7d2d-46ed-a4b5-efa8281c2833"
@@ -259,7 +259,7 @@
       "leadin_distance": 0,
       "leadin_elevation": 0,
       "sports": "all",
-      "local": 12,
+      "level": 12,
       "eventonly": false,
       "link": "https://zwiftinsider.com/road-to-sky/",
       "id": "2120c30c-b92b-448a-9cb3-deb68dde30a2"
@@ -273,7 +273,7 @@
       "leadin_distance": 0,
       "leadin_elevation": 0,
       "sports": "all",
-      "local": 12,
+      "level": 12,
       "eventonly": false,
       "link": "https://zwiftinsider.com/four-horsemen/",
       "id": "2d310ffa-863b-4e7e-bdaf-6c66a4969a08"
@@ -425,7 +425,7 @@
       "leadin_distance": 0,
       "leadin_elevation": 0,
       "sports": "all",
-      "local": 10,
+      "level": 10,
       "eventonly": true,
       "link": "https://zwiftinsider.com/gran-fondo/",
       "id": "23741032-9539-499f-a699-a2c2a460273f"
@@ -439,7 +439,7 @@
       "leadin_distance": 0,
       "leadin_elevation": 0,
       "sports": "all",
-      "local": 10,
+      "level": 10,
       "eventonly": true,
       "link": "https://zwiftinsider.com/bambino-fondo/",
       "id": "e9b42fdd-e5e1-48ab-9ac2-2d26945827ef"
@@ -453,7 +453,7 @@
       "leadin_distance": 0,
       "leadin_elevation": 0,
       "sports": "all",
-      "local": 10,
+      "level": 10,
       "eventonly": true,
       "link": "https://zwiftinsider.com/medio-fondo/",
       "id": "aebaa4f6-3526-45b6-9aea-db31d4c9fa4c"
@@ -481,7 +481,7 @@
       "leadin_distance": 0,
       "leadin_elevation": 0,
       "sports": "all",
-      "local": 12,
+      "level": 12,
       "eventonly": false,
       "link": "https://zwiftinsider.com/uber-pretzel/",
       "id": "f2e02521-e76e-4955-9f8f-9a235c2a61f6"
@@ -509,7 +509,7 @@
       "leadin_distance": 0,
       "leadin_elevation": 0,
       "sports": "all",
-      "local": 10,
+      "level": 10,
       "eventonly": false,
       "link": "https://zwiftinsider.com/bigger-loop/",
       "id": "de3288bd-fdc8-4962-b4c6-5db883dee124"
@@ -606,7 +606,7 @@
       "leadin_distance": 0,
       "leadin_elevation": 0,
       "sports": "all",
-      "local": 12,
+      "level": 12,
       "eventonly": false,
       "link": "https://zwiftinsider.com/dust-in-the-wind/",
       "id": "748aba06-ac93-4f6b-8831-f6d0ceb3ea6c"
@@ -620,7 +620,7 @@
       "leadin_distance": 0,
       "leadin_elevation": 0,
       "sports": "all",
-      "local": 12,
+      "level": 12,
       "eventonly": false,
       "link": "https://zwiftinsider.com/quatch-quest",
       "id": "a16d04b1-8bfb-4bb6-8d2a-41f6a0d875d0"
@@ -686,7 +686,7 @@
       "leadin_distance": 0.2,
       "leadin_elevation": 0,
       "sports": "all",
-      "local": 10,
+      "level": 10,
       "eventonly": true,
       "id": "29cde608-a69f-40da-ab8c-812e2e52385b",
       "difficulty": 0
@@ -699,7 +699,7 @@
       "leadin_distance": 0.4,
       "leadin_elevation": 0,
       "sports": "all",
-      "local": 10,
+      "level": 10,
       "eventonly": true,
       "id": "855459c3-e709-451e-93c1-bdd90cc9ea49",
       "difficulty": 0
@@ -725,7 +725,7 @@
       "leadin_distance": 0.4,
       "leadin_elevation": 0,
       "sports": "all",
-      "local": 10,
+      "level": 10,
       "eventonly": true,
       "id": "609fd056-c90d-4355-a807-30add054eb7d",
       "difficulty": 0
@@ -738,7 +738,7 @@
       "leadin_distance": 0.2,
       "leadin_elevation": 0,
       "sports": "all",
-      "local": 10,
+      "level": 10,
       "eventonly": true,
       "id": "2427c4ab-1687-48a0-ac3b-120702c9d156",
       "difficulty": 0
@@ -751,7 +751,7 @@
       "leadin_distance": 0.4,
       "leadin_elevation": 0,
       "sports": "all",
-      "local": 10,
+      "level": 10,
       "eventonly": true,
       "id": "dff92413-b750-4548-a18d-5e40cffc72ee",
       "difficulty": 0
@@ -1095,7 +1095,7 @@
       "leadin_distance": 0.2,
       "leadin_elevation": 0,
       "sports": "all",
-      "local": 10,
+      "level": 10,
       "eventonly": true,
       "id": "54b574f4-c3ae-4f9e-92a8-7107ce1efbb3",
       "difficulty": 0
@@ -1108,7 +1108,7 @@
       "leadin_distance": 0.2,
       "leadin_elevation": 0,
       "sports": "all",
-      "local": 10,
+      "level": 10,
       "eventonly": true,
       "id": "c50b3333-6cc0-44c0-b6da-bf3d5644988d",
       "difficulty": 0

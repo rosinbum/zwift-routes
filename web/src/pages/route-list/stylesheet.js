@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 /**
  * Stylesheet for the list routes page
  */
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
     flexFlow: 'column nowrap',
@@ -19,7 +19,10 @@ const useStyles = makeStyles({
     display: 'block',
     flexGrow: 1,
     overflowY: 'scroll'
+  },
+  menuIconButton: {
+    marginRight: theme.spacing(2)
   }
-});
+}));
 
 export default useStyles;

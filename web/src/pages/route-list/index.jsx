@@ -2,7 +2,11 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import Drawer from '@material-ui/core/Drawer';
-import { ApplicationBar } from '../../components';
+import AppBar from '@material-ui/core/AppBar';
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
 import RouteList from './RouteList';
 import SettingsForm from '../settings';
 import { sortComparator } from '../settings/sortFields';
@@ -32,13 +36,26 @@ const RouteListPage = () => {
    */
   const onSelectRoute = (route) => { history.push(`/route/${route.id}`); };
 
+  const menuButtonProps = {
+    'aria-label': 'menu',
+    className: style.menuIconButton,
+    color: 'inherit',
+    edge: 'start',
+    onClick: setDrawerVisibility(true)
+  };
+
   return (
     <div className={style.root}>
-      <ApplicationBar
-        leftIcon="menu"
-        onLeftIconPressed={setDrawerVisibility(true)}
-        title="Zwift Routes"
-      />
+      <AppBar position="relative">
+        <Toolbar>
+          <IconButton {...menuButtonProps}>
+            <MenuIcon />
+          </IconButton>
+          <Typography variant="h6" style={{ flexGrow: 1 }}>
+            Zwift Routes
+          </Typography>
+        </Toolbar>
+      </AppBar>
       <div className={style.content}>
         <RouteList
           displayUnits={settings.display_units}
