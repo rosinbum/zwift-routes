@@ -6,14 +6,13 @@ import { ZwiftRoutePropTypes } from '../../app-state/models/ZwiftRoute';
 import CritCity from '../../assets/badges/CritCity.png';
 import London from '../../assets/badges/London.png';
 import NewYork from '../../assets/badges/NewYork.png';
-import Watopia from '../../assets/badges/Watopia.png';
+import DefaultBadge from '../../assets/badges/Default.png';
 
 /* eslint-disable quote-props */
 const badges = {
   'Crit City': CritCity,
   'London': London,
-  'New York': NewYork,
-  'Watopia': Watopia
+  'New York': NewYork
 };
 /* eslint-enable quote-props */
 
@@ -39,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
 
 const RouteBadge = ({ route }) => {
   const style = useStyles();
-  const badge = badges[route.zwiftWorld] || Watopia;
+  const badge = badges[route.zwiftWorld] || DefaultBadge;
 
   return (
     <div className={style.root}>
