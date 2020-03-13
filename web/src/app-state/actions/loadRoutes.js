@@ -1,4 +1,9 @@
 import fetch from 'cross-fetch';
+import {
+  startNetworkRequest,
+  stopNetworkRequest,
+  showNetworkError
+} from '../reducers/network';
 import { loadRoutesActionCreator } from '../reducers/routes';
 
 /* eslint-disable no-console */
@@ -12,15 +17,18 @@ const ROUTES_URI = `${process.env.PUBLIC_URL}/routes.json`;
 export default function loadRoutes() {
   return async (dispatch) => {
     try {
+      dispatch(startNetworkRequest());
       const response = await fetch(ROUTES_URI);
-      console.debug(response);
       if (response.status !== 200) {
         throw new Error(`Response returned error code ${response.status} ${response.statusText}`);
       }
       const routes = await response.json();
       console.debug(routes);
+      dispatch(stopNetworkRequest());
       dispatch(loadRoutesActionCreator(routes));
     } catch (error) {
+      dispatch(stopNetworkRequest());
+      dispatch(showNetworkError(error));
       console.error(error);
     }
   };
