@@ -5,6 +5,7 @@ import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 import appReducer from './reducers';
 import { loadRoutes } from './actions';
+import saveRoutesMiddleware from './save-routes-middleware';
 
 /*
  * Standard boilerplate Redux store recipe for creating
@@ -21,6 +22,7 @@ const persistConfig = {
 const persistedReducer = persistReducer(persistConfig, appReducer);
 const middleware = applyMiddleware(
   createLogger({ collapsed: true }),
+  saveRoutesMiddleware,
   thunkMiddleware
 );
 const store = createStore(persistedReducer, middleware);

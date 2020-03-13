@@ -1,7 +1,7 @@
 import ZwiftRoute from '../models/ZwiftRoute';
 
 const LOAD_ROUTES_ACTION = Symbol.for('route.loadRoutes');
-const UPDATE_ROUTE_ACTION = Symbol.for('route.updateRoute');
+export const UPDATE_ROUTE_ACTION = Symbol.for('route.updateRoute');
 
 /**
  * Action Creator to dispatch once you have a list of routes.
@@ -20,10 +20,11 @@ export const loadRoutesActionCreator = (routes) => ({
  * @param {string} routeId ID of the route to update
  * @param {*} instructions the update to the route
  */
-export const completeRoute = (routeId, isCompleted) => ({
+export const completeRoute = (routeId, isCompleted, isLoading = false) => ({
   type: UPDATE_ROUTE_ACTION,
   routeId,
-  routeUpdate: { isCompleted }
+  routeUpdate: { isCompleted },
+  isLoading
 });
 
 /**

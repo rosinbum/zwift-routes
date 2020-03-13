@@ -4,7 +4,11 @@ import {
   stopNetworkRequest,
   showNetworkError
 } from '../reducers/network';
-import { loadRoutesActionCreator } from '../reducers/routes';
+import {
+  loadRoutesActionCreator,
+  completeRoute
+} from '../reducers/routes';
+import routeServiceClient from '../../services/route-service';
 
 /* eslint-disable no-console */
 
@@ -17,15 +21,23 @@ const ROUTES_URI = `${process.env.PUBLIC_URL}/routes.json`;
 export default function loadRoutes() {
   return async (dispatch) => {
     try {
+      // Load the route database
       dispatch(startNetworkRequest());
       const response = await fetch(ROUTES_URI);
       if (response.status !== 200) {
         throw new Error(`Response returned error code ${response.status} ${response.statusText}`);
       }
       const routes = await response.json();
-      console.debug(routes);
-      dispatch(stopNetworkRequest());
       dispatch(loadRoutesActionCreator(routes));
+
+      // Load the route state for this user
+      const routeStates = await routeServiceClient.loadRouteState();
+      routeStates.forEach((item) => {
+        // Set isLoading == true so we don't save what we loaded
+        dispatch(completeRoute(item.routeId, item.isCompleted, true));
+      });
+
+      dispatch(stopNetworkRequest());
     } catch (error) {
       dispatch(stopNetworkRequest());
       dispatch(showNetworkError(error));
