@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8e6f51b3a0471dcb61d980622723885b",
+    "revision": "d2d330bfe1ca7326ffc0d726397985bc",
     "url": "/zwift-routes/index.html"
   },
   {
-    "revision": "4d40b309087133ae2ba3",
+    "revision": "5bb12594dec2cba66c89",
     "url": "/zwift-routes/static/css/main.8cb5bd93.chunk.css"
   },
   {
-    "revision": "52119c1347eb9d6d48be",
-    "url": "/zwift-routes/static/js/2.2dd58eb8.chunk.js"
+    "revision": "13359a122907f04851ab",
+    "url": "/zwift-routes/static/js/2.63be629d.chunk.js"
   },
   {
     "revision": "ac9fac6c8e755a8efecd01981adb88e6",
-    "url": "/zwift-routes/static/js/2.2dd58eb8.chunk.js.LICENSE.txt"
+    "url": "/zwift-routes/static/js/2.63be629d.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "4d40b309087133ae2ba3",
-    "url": "/zwift-routes/static/js/main.c7bb2e0d.chunk.js"
+    "revision": "5bb12594dec2cba66c89",
+    "url": "/zwift-routes/static/js/main.c0dd44dc.chunk.js"
   },
   {
     "revision": "7bf7bca241b8fcec2e64",
@@ -28,6 +28,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/zwift-routes/static/media/CritCity.b20b41b5.png"
   },
   {
+    "revision": "964b675c93d27eacea15184e08aa8a73",
+    "url": "/zwift-routes/static/media/Default.964b675c.png"
+  },
+  {
     "revision": "01df692c6d2f1b88423b5c5f8dd0be14",
     "url": "/zwift-routes/static/media/London.01df692c.png"
   },
@@ -36,7 +40,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/zwift-routes/static/media/NewYork.caf4ccfa.png"
   },
   {
-    "revision": "964b675c93d27eacea15184e08aa8a73",
-    "url": "/zwift-routes/static/media/Watopia.964b675c.png"
+    "revision": "e5ad7e910b2e020da9eaf927c7e88d02",
+    "url": "/zwift-routes/static/media/Watopia.e5ad7e91.png"
   }
 ]);
