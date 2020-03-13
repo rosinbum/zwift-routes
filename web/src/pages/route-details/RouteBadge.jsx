@@ -6,13 +6,15 @@ import { ZwiftRoutePropTypes } from '../../app-state/models/ZwiftRoute';
 import CritCity from '../../assets/badges/CritCity.png';
 import London from '../../assets/badges/London.png';
 import NewYork from '../../assets/badges/NewYork.png';
+import Watopia from '../../assets/badges/Watopia.png';
 import DefaultBadge from '../../assets/badges/Default.png';
 
 /* eslint-disable quote-props */
 const badges = {
   'Crit City': CritCity,
   'London': London,
-  'New York': NewYork
+  'New York': NewYork,
+  'Watopia': Watopia
 };
 /* eslint-enable quote-props */
 
