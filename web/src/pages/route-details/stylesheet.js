@@ -15,6 +15,14 @@ const useStyles = makeStyles((theme) => ({
     top: 0,
     width: '100%'
   },
+  completedButton: {
+    display: 'inline',
+    position: 'absolute',
+    right: 0,
+    paddingRight: theme.spacing(2),
+    paddingTop: theme.spacing(1),
+    zIndex: theme.zIndex.drawer + 10
+  },
   header: {
     display: 'flex',
     flexFlow: 'column nowrap'

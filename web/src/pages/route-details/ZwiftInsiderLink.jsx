@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import IconButton from '@material-ui/core/IconButton';
 import { makeStyles } from '@material-ui/core/styles';
 import ZwiftInsiderIcon from '../../assets/zwiftinsider.png';
 
@@ -9,7 +10,8 @@ const useStyles = makeStyles((theme) => ({
     position: 'absolute',
     left: 0,
     paddingLeft: theme.spacing(2),
-    paddingTop: theme.spacing(1)
+    paddingTop: theme.spacing(1),
+    zIndex: theme.zIndex.drawer + 10
   },
   icon: {
     height: '3rem',
@@ -22,9 +24,9 @@ const ZwiftInsiderLink = ({ link }) => {
 
   return (
     <div className={style.root}>
-      <a href={link} target="_blank" rel="noopener noreferrer">
+      <IconButton href={link}>
         <img className={style.icon} src={ZwiftInsiderIcon} alt="Zwift Insider" />
-      </a>
+      </IconButton>
     </div>
   );
 };

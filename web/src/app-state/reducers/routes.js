@@ -20,7 +20,7 @@ export const loadRoutesActionCreator = (routes) => ({
  * @param {string} routeId ID of the route to update
  * @param {*} instructions the update to the route
  */
-export const completeRouteActionCreator = (routeId, isCompleted) => ({
+export const completeRoute = (routeId, isCompleted) => ({
   type: UPDATE_ROUTE_ACTION,
   routeId,
   routeUpdate: { isCompleted }
