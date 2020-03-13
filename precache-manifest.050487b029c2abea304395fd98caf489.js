@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "892565122a2ce7bee230b5541a743c0e",
+    "revision": "8e6f51b3a0471dcb61d980622723885b",
     "url": "/zwift-routes/index.html"
   },
   {
-    "revision": "3bde528ac5205ba849ef",
+    "revision": "4d40b309087133ae2ba3",
     "url": "/zwift-routes/static/css/main.8cb5bd93.chunk.css"
   },
   {
-    "revision": "e34a6c832e6486f1770f",
-    "url": "/zwift-routes/static/js/2.475271d2.chunk.js"
+    "revision": "52119c1347eb9d6d48be",
+    "url": "/zwift-routes/static/js/2.2dd58eb8.chunk.js"
   },
   {
     "revision": "ac9fac6c8e755a8efecd01981adb88e6",
-    "url": "/zwift-routes/static/js/2.475271d2.chunk.js.LICENSE.txt"
+    "url": "/zwift-routes/static/js/2.2dd58eb8.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "3bde528ac5205ba849ef",
-    "url": "/zwift-routes/static/js/main.5c94c2b7.chunk.js"
+    "revision": "4d40b309087133ae2ba3",
+    "url": "/zwift-routes/static/js/main.c7bb2e0d.chunk.js"
   },
   {
     "revision": "7bf7bca241b8fcec2e64",
