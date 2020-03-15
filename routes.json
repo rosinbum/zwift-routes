@@ -1578,7 +1578,7 @@
       "leadin_elevation": 0,
       "sports": "all",
       "level": 0,
-      "eventonly": false,
+      "eventonly": true,
       "link": "https://zwiftinsider.com/bologna-time-trial-lap/",
       "id": "919b6d38-8869-4bed-bdc6-ba0727152e5f"
     },
@@ -1676,8 +1676,9 @@
       "leadin_elevation": 0,
       "sports": "all",
       "level": 0,
-      "eventonly": false,
-      "id": "83b7ba95-2b19-409e-a220-bc7eae80287c"
+      "eventonly": true,
+      "id": "83b7ba95-2b19-409e-a220-bc7eae80287c",
+      "link": "https://zwiftinsider.com/downtown-dolphin/"
     },
     {
       "world": "Crit City",
@@ -1689,7 +1690,8 @@
       "leadin_elevation": 0,
       "sports": "all",
       "level": 0,
-      "eventonly": false,
-      "id": "7be0ceda-6aac-41bc-b063-b8f1bcbe6287"
+      "eventonly": true,
+      "id": "7be0ceda-6aac-41bc-b063-b8f1bcbe6287",
+      "link": "https://zwiftinsider.com/bell-lap/"
     }
   ]
