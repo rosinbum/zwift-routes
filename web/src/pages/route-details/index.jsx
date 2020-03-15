@@ -24,6 +24,7 @@ const RouteDetailsPage = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
   const routes = useSelector((state) => state.routes);
+  const displayUnits = useSelector((state) => state.settings.display_units);
   const route = routes.find((r) => r.id === id);
   const insiderLink = route.zwiftInsiderLink ? (
     <ZwiftInsiderLink link={route.zwiftInsiderLink} />
@@ -75,7 +76,7 @@ const RouteDetailsPage = () => {
             </IconButton>
           </div>
           <RouteBadge route={route} />
-          <RouteDetails route={route} />
+          <RouteDetails displayUnits={displayUnits} route={route} />
         </div>
       </div>
       <CompleteRideDialog open={openDialog} onClose={(v) => onCompleteRide(v)} />
