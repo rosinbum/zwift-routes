@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "88c316184af925ac1f2fe076bdd95cfa",
+    "revision": "3270f5cf1f87309bd04dcb281e49e5f2",
     "url": "/zwift-routes/index.html"
   },
   {
