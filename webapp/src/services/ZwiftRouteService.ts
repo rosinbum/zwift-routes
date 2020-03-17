@@ -1,7 +1,7 @@
 import { ZwiftUserService } from './internal-types';
 import { ZwiftRouteData } from 'models/internal-types';
 import ZwiftRoute from 'models/ZwiftRoute';
-import staticRouteData from '@assets/routes.json';
+import staticRouteData from './data/routes.json';
 
 /**
  * Stores and retrieves the route data from the backing store(s).  The route
@@ -28,7 +28,12 @@ export default class ZwiftRouteService {
    * @returns the list of routes (async)
    */
   async getAllZwiftRoutes(): Promise<ZwiftRoute[]> {
-    throw new Error('not implemented');
+    const allUserData = await this.userService.getAllUserData();
+    const result = this.sourceData.map((routeData) => {
+      const dynamicData = allUserData.find((r) => r.routeId === routeData.id);
+      return new ZwiftRoute(routeData, dynamicData);
+    });
+    return result;
   }
 
   /**
@@ -37,8 +42,11 @@ export default class ZwiftRouteService {
    * @param id the ID of the route to return.
    * @returns the route or undefined if the route does not exist.
    */
-  async getZwiftRoute(id: string): Promise<ZwiftRoute> {
-    throw new Error('not implemented');
+  async getZwiftRoute(id: string): Promise<ZwiftRoute | undefined> {
+    const routeData = this.sourceData.find((r) => r.id === id);
+    if (!routeData) return undefined;
+    const dynamicData = await this.userService.getUserData(id);
+    return new ZwiftRoute(routeData, dynamicData);
   }
 
   /**
@@ -47,6 +55,7 @@ export default class ZwiftRouteService {
    * @param route the route to store.
    */
   async storeZwiftRoute(route: ZwiftRoute): Promise<void> {
-    throw new Error('not implemented');
+    const userData = route.getZwiftUserData();
+    await this.userService.setUserData(userData);
   }
 }

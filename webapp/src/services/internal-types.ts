@@ -11,6 +11,14 @@ export interface ZwiftUserService {
   getAllUserData(): Promise<ZwiftUserData[]>;
 
   /**
+   * Async method to retrieve the data from the store. 
+   * 
+   * @param id the route ID for the ZwiftRoute
+   * @returns the ZwiftUserData, or undefined if none available (async).
+   */
+  getUserData(id: string): Promise<ZwiftUserData | undefined>;
+
+  /**
    * Async method to update the data for a specific route.
    */
   setUserData(userData: ZwiftUserData): Promise<void>;

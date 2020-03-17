@@ -2,9 +2,6 @@
   "compilerOptions": {
     "target": "es5",
     "baseUrl": "src",
-    "paths": {
-      "@assets/*": [ "../../assets/*" ]
-    },
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,

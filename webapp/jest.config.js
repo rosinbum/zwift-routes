@@ -3,12 +3,15 @@ module.exports = {
   coverageDirectory: 'coverage',
   moduleFileExtensions: [ 'js', 'json', 'jsx', 'ts', 'tsx' ],
   moduleNameMapper: {
-    '@src/(.*)': '<rootDir>/src/$1',
     '\\.(css|scss)$': '<rootDir>/node_modules/jest-css-modules'
   },
+  moduleDirectories: [
+    'node_modules', 'src'
+  ],
   roots: [
     '<rootDir>/src'
   ],
+  testRegex: '/__tests__/.*\\.test\\.tsx?$',
   testPathIgnorePatterns: [
     '/node_modules/',
     'stories.tsx'
