@@ -1,5 +1,4 @@
 /* eslint-env jest */
-
 import ZwiftRoute from '../ZwiftRoute';
 
 const completeSample = {
