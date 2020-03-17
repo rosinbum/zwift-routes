@@ -3,6 +3,11 @@ module.exports = {
   collectCoverageFrom: [
     'src/**/*.{ts,tsx,js,jsx}'
   ],
+  coveragePathIgnorePatterns: [
+    '/node_modules/',
+    '/.*.d.ts$',
+    '<rootDir>/src/index.tsx'
+  ],
   coverageDirectory: 'coverage',
   moduleFileExtensions: [ 'js', 'json', 'jsx', 'ts', 'tsx' ],
   moduleNameMapper: {
