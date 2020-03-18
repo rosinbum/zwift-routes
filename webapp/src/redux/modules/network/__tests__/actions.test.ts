@@ -17,7 +17,7 @@ test('can create NET_SET_ERROR', () => {
   const result = network.netSetError(new Error());
   expect(result).toBeInstanceOf(Object);
   expect(result.type).toBe(network.NET_SET_ERROR);
-  expect(result.payload).toBeInstanceOf(Error);
+  expect(result.error).toBeInstanceOf(Error);
 });
 
 test('can create NET_CLEAR_ERROR', () => {

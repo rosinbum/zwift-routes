@@ -1,9 +1,9 @@
-import { AnyAction } from 'redux';
+import { FluxAction } from 'redux/actions';
 import {
-  netClearError,
-  netSetError,
-  netStartRequest,
-  netStopRequest
+  NET_CLEAR_ERROR,
+  NET_SET_ERROR,
+  NET_START_REQUEST,
+  NET_STOP_REQUEST
 } from './actions';
 
 /**
@@ -32,15 +32,15 @@ const initialState: NetworkState = {
  * @param action Action to be performed
  * @returns New state
  */
-function reducer(state = initialState, action: AnyAction): NetworkState {
+function reducer(state = initialState, action: FluxAction): NetworkState {
   switch (action.type) {
-    case netClearError.type:
+    case NET_CLEAR_ERROR:
       return { ...state, error: undefined };
-    case netSetError.type:
-      return { ...state, error: action.payload };
-    case netStartRequest.type:
+    case NET_SET_ERROR:
+      return { ...state, error: action.error };
+    case NET_START_REQUEST:
       return { ...state, requests: state.requests + 1 };
-    case netStopRequest.type:
+    case NET_STOP_REQUEST:
       return { ...state, requests: state.requests - 1 };
     default:
       return state;

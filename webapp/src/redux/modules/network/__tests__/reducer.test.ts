@@ -1,5 +1,5 @@
 /* eslint-env jest */
-import { createAction } from '@reduxjs/toolkit';
+import { FluxAction } from 'redux/actions';
 import { 
   netStartRequest,
   netStopRequest,
@@ -8,7 +8,7 @@ import {
 } from '../actions';
 import network, { NetworkState } from '../reducer';
 
-const invalidAction = createAction('@@invalid')();
+const invalidAction: FluxAction = { type: '@@invalid' };
 const randomState: NetworkState = { requests: 20, error: new Error('invalid') };
 
 test('initialState is set', () => {

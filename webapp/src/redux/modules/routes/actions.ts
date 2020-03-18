@@ -1,4 +1,4 @@
-import { createAction } from '@reduxjs/toolkit';
+import { FluxAction } from 'redux/actions';
 import ZwiftRoute from 'models/ZwiftRoute';
 
 /* Constants for the action types */
@@ -10,11 +10,17 @@ export const ROUTES_REPLACE = 'routes.replace';
  * 
  * @param routes The routes list.
  */
-export const routesLoader = createAction<ZwiftRoute[]>(ROUTES_LOADER);
+export const routesLoader = (routes: ZwiftRoute[]): FluxAction => ({
+  type: ROUTES_LOADER,
+  payload: routes
+});
 
 /**
  * Action creator to mark a route as complete
  * 
  * @param routeId The route ID
  */
-export const replaceRoute = createAction<ZwiftRoute>(ROUTES_REPLACE);
+export const replaceRoute = (route: ZwiftRoute): FluxAction => ({
+  type: ROUTES_REPLACE,
+  payload: route
+});

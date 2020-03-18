@@ -1,6 +1,6 @@
-import { AnyAction } from 'redux';
+import { FluxAction } from 'redux/actions';
 import ZwiftRoute from 'models/ZwiftRoute';
-import { routesLoader, replaceRoute } from './actions';
+import { ROUTES_LOADER, ROUTES_REPLACE } from './actions';
 
 /**
  * Type for the routes portion of the redux application state store
@@ -19,11 +19,11 @@ const initialState: RoutesState = [];
  * @param action Action to be performed
  * @returns New state
  */
-function reducer(state = initialState, action: AnyAction): RoutesState {
+function reducer(state = initialState, action: FluxAction): RoutesState {
   switch (action.type) {
-    case routesLoader.type:
+    case ROUTES_LOADER:
       return [ ...action.payload ];
-    case replaceRoute.type:
+    case ROUTES_REPLACE:
       {
         const route = action.payload as ZwiftRoute;
         return state.map((r) => r.id === route.id ? route : r);        

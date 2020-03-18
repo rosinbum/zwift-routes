@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import store from './redux/store';
+import { PersistGate } from 'redux-persist/es/integration/react';
+import { LoadingScreen } from 'ui/components';
+import store, { persistor } from './redux/store';
 import { routeService } from './services';
 import * as actions from 'redux/actions';
 
@@ -20,7 +22,9 @@ routeService.getAllZwiftRoutes().then((routes) => {
 // and the redux store).
 const Application: React.SFC<{}> = () => (
   <Provider store={store}>
-    <h1>In Application (with Provider)!</h1>
+    <PersistGate loading={<LoadingScreen />} persistor={persistor}>
+      <h1>In Application (with Provider)!</h1>
+    </PersistGate>
   </Provider>
 );
 

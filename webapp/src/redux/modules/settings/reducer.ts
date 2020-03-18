@@ -1,5 +1,5 @@
-import { AnyAction } from 'redux';
-import { setRouteFilter, setSortOrder, setDisplayUnits } from './actions';
+import { FluxAction } from 'redux/actions';
+import { SETTINGS_DISPLAY, SETTINGS_FILTER, SETTINGS_SORT } from './actions';
 import RouteFilter from 'models/RouteFilter';
 import SortField from 'models/SortField';
 import DisplayUnits from 'models/DisplayUnits';
@@ -47,14 +47,14 @@ const initialState: SettingsState = {
  * @param action Action to be performed
  * @returns New state
  */
-function reducer(state = initialState, action: AnyAction): SettingsState {
+function reducer(state = initialState, action: FluxAction): SettingsState {
   switch (action.type) {
-    case setRouteFilter.type:
-      return { ...state, routeFilter: action.payload };
-    case setSortOrder.type:
-      return { ...state, sortOrder: action.payload };
-    case setDisplayUnits.type:
+    case SETTINGS_DISPLAY:
       return { ...state, displayUnits: action.payload };
+    case SETTINGS_FILTER:
+      return { ...state, routeFilter: action.payload };
+    case SETTINGS_SORT:
+      return { ...state, sortOrder: action.payload };
     default:
       return state;
   }

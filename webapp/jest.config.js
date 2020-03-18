@@ -5,7 +5,8 @@ module.exports = {
   coveragePathIgnorePatterns: [
     '/node_modules/',
     '/.*.d.ts$',
-    '<rootDir>/src/index.tsx'
+    '<rootDir>/src/index.tsx',
+    '/.*.stories.tsx$'
   ],
   coverageDirectory: 'coverage',
   moduleFileExtensions: [ 'js', 'json', 'jsx', 'ts', 'tsx' ],
@@ -18,6 +19,8 @@ module.exports = {
   roots: [
     '<rootDir>/src'
   ],
+  snapshotSerializers: [ "enzyme-to-json/serializer" ],
+  setupFiles: [ './src/setupTests.ts' ],
   testRegex: '/__tests__/.*\\.test\\.tsx?$',
   testPathIgnorePatterns: [
     '/node_modules/',

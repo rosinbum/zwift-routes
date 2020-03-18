@@ -1,5 +1,5 @@
 /* eslint-env jest */
-import { createAction } from '@reduxjs/toolkit';
+import { FluxAction } from 'redux/actions';
 import {
   setDisplayUnits,
   setRouteFilter,
@@ -12,7 +12,7 @@ import SortField from 'models/SortField';
 import SortOrder from 'models/SortOrder';
 import ZwiftSport from 'models/ZwiftSport';
 
-const invalidAction = createAction('@@invalid')();
+const invalidAction: FluxAction = { type: '@@invalid' };
 const randomState: SettingsState = {
   routeFilter: {
     sport: ZwiftSport.Cycling,

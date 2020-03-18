@@ -1,4 +1,4 @@
-import { createAction } from '@reduxjs/toolkit';
+import { FluxAction } from 'redux/actions';
 import ZwiftRoute from 'models/ZwiftRoute';
 import reducer, { RoutesState } from '../reducer';
 import { routesLoader, replaceRoute } from '../actions';
@@ -28,7 +28,7 @@ const sample2 = {
   eventonly: true,
   id: "d6bad120-7602-1340-94df-fb3b71d5b8c8"
 };
-const invalidAction = createAction('@@invalid')();
+const invalidAction: FluxAction = { type: '@@invalid' };
 const randomState: RoutesState = [ new ZwiftRoute(sample1), new ZwiftRoute(sample2) ];
 
 test('initialState is set', () => {
