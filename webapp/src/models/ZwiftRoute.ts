@@ -1,5 +1,8 @@
 import capitalize from 'lodash/capitalize';
-import { ZwiftRouteData, ZwiftUserData } from "./internal-types";
+import ZwiftUserData from './ZwiftUserData';
+import RouteFilter from './RouteFilter';
+import ZwiftSport from './ZwiftSport';
+import ZwiftRouteData from './ZwiftRouteData'
 
 /**
  * The model for a single ZwiftRoute
@@ -156,5 +159,45 @@ export default class ZwiftRoute {
       routeId: this.id,
       isCompleted: this.isCompleted
     };
+  }
+
+  /**
+   * Determines if this route is a match for the provided filter
+   * 
+   * @param filter the route filter to compare this route to
+   * @returns true if this route matches the filter.
+   */
+  isMatch(filter: RouteFilter): boolean {
+    // The general process is to escape out (return false) if something
+    // doesn't match - if everything matches, then return true.
+    if (filter.world) {
+      const worldSet = [ filter.world ];
+      if (filter.includeDefaultWorld) worldSet.push('Watopia');
+      if (!worldSet.includes(this.zwiftWorld)) {
+        return false;
+      }
+    }
+
+    if (filter.sport && filter.sport === ZwiftSport.Cycling && !this.isForCycling) {
+      return false;
+    }
+
+    if (filter.sport && filter.sport === ZwiftSport.Running && !this.isForRunning) {
+      return false;
+    }
+
+    if (!filter.includeCompletedRoutes && this.isCompleted) {
+      return false;
+    }
+
+    if (!filter.includeEventOnlyRoutes && this.isEventOnly) {
+      return false;
+    }
+
+    if (filter.maximumZwiftLevel && this.minimumZwiftLevel >= filter.maximumZwiftLevel) {
+      return false;
+    }
+    
+    return true;
   }
 }

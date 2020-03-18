@@ -1,4 +1,4 @@
-import { ZwiftUserData } from 'models/internal-types';
+import ZwiftUserData from 'models/ZwiftUserData';
 
 /**
  * The ZwiftUserService stores dynamic data about the routes that

@@ -1,5 +1,5 @@
 import { ZwiftUserService } from './internal-types';
-import { ZwiftUserData } from 'models/internal-types';
+import ZwiftUserData from 'models/ZwiftUserData';
 import Dexie from 'dexie';
 
 /**
