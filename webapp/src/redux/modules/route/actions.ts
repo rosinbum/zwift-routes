@@ -4,7 +4,7 @@ import { ZwiftRoute } from "../../../models";
 export enum RouteActionTypes {
   LoadRoutes    = 'route.load-routes',
   UpdateRoute   = 'route.update-route'
-};
+}
 
 /**
  * Action creator to load the routes into the redux store.

@@ -10,7 +10,7 @@ export enum ActionType {
   SetSort      = 'app.set-sort',
   StartRequest = 'app.start-request',
   StopRequest  = 'app.stop-request'
-};
+}
 
 /** Action creator to acknowledge the error */
 export const clearError = (): FluxAction => ({
