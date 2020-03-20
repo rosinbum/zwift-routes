@@ -21,7 +21,7 @@ const loggerConfiguration = {
   collapsed: true,
   diff: true,
   // Log only if not testing
-  predicate: () => (!jest)
+  predicate: () => (typeof jest !== 'undefined')
 };
 
 /* Apply Middleware to the store */
