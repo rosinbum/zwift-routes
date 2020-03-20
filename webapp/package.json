@@ -1,38 +1,30 @@
 {
-  "name": "zwift-routes-react-web",
+  "name": "webapp",
   "version": "0.1.0",
-  "description": "The Zwift Routes app - for the web",
-  "author": "Adrian Hall <photoadrian@outlook.com>",
-  "homepage": "https://adrianhall.github.io/zwift-routes",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.9.7",
     "@material-ui/icons": "^4.9.1",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.5.0",
-    "@testing-library/user-event": "^7.2.1",
     "dexie": "^2.0.4",
     "lodash": "^4.17.15",
-    "npm-run-all": "^4.1.5",
-    "react": "^16.13.0",
-    "react-dom": "^16.13.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "react-media": "^1.10.0",
     "react-redux": "^7.2.0",
-    "react-router-dom": "^5.1.2",
-    "react-scripts": "3.4.0",
     "react-spinners-kit": "^1.9.1",
     "redux": "^4.0.5",
     "redux-logger": "^3.0.6",
-    "redux-persist": "^6.0.0",
-    "typescript": "^3.7.5"
+    "redux-persist": "^6.0.0"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^5.3.17",
     "@storybook/addon-links": "^5.3.17",
     "@storybook/addons": "^5.3.17",
-    "@storybook/preset-create-react-app": "^2.0.0",
+    "@storybook/preset-create-react-app": "^2.1.0",
     "@storybook/react": "^5.3.17",
-    "@types/enzyme-adapter-react-16": "^1.0.6",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
     "@types/jest": "^24.9.1",
     "@types/lodash": "^4.14.149",
     "@types/node": "^12.12.30",
@@ -40,28 +32,16 @@
     "@types/react-dom": "^16.9.5",
     "@types/react-redux": "^7.1.7",
     "@types/redux-logger": "^3.0.7",
-    "@typescript-eslint/eslint-plugin": "^2.24.0",
-    "@typescript-eslint/parser": "^2.24.0",
-    "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.2",
-    "enzyme-to-json": "^3.4.4",
-    "eslint": "^6.8.0",
-    "eslint-plugin-flowtype": "^4.6.0",
-    "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-react": "^7.19.0",
+    "@types/redux-persist": "^4.3.1",
     "fake-indexeddb": "^3.0.0",
-    "jest": "^25.1.0",
-    "node-sass": "^4.13.1",
-    "ts-jest": "^25.2.1"
+    "react-scripts": "3.4.0",
+    "typescript": "^3.7.5"
   },
   "scripts": {
-    "lint": "eslint --ext ts,tsx src",
+    "coverage": "react-scripts test --collect-coverage --watchAll=false",
     "start": "react-scripts start",
-    "prebuild": "run-s lint test",
     "build": "react-scripts build",
-    "pretest": "run-s lint",
-    "test": "jest --verbose --config=./jest.config.js",
-    "test:coverage": "jest --collectCoverage --config=./jest.config.js",
+    "test": "react-scripts test --watchAll=false",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public"
@@ -76,6 +56,21 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}"
+    ],
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/src/index.tsx",
+      "<rootDir>/src/serviceWorker.ts",
+      "/node_modules",
+      "/.*.d.ts$",
+      "/.*.stories.tsx$"
     ]
   }
 }

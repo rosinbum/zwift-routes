@@ -1,6 +1,5 @@
 import { ZwiftUserService } from './internal-types';
-import ZwiftRouteData from 'models/ZwiftRouteData';
-import ZwiftRoute from 'models/ZwiftRoute';
+import { ZwiftRoute, ZwiftRouteData } from '../models';
 import staticRouteData from './data/routes.json';
 
 /**

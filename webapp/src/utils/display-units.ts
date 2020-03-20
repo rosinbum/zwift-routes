@@ -1,4 +1,4 @@
-import DisplayUnits from 'models/DisplayUnits';
+import { DisplayUnits } from '../models';
 
 /**
  * Converts kilometers to miles.

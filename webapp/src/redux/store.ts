@@ -1,34 +1,37 @@
-import { applyMiddleware, compose, createStore } from 'redux';
+import { applyMiddleware, compose, createStore, combineReducers } from 'redux';
 import { createLogger } from 'redux-logger';
 import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
-import appReducer from './reducers';
+import appReducer from './modules/app/reducer';
+import routeReducer from './modules/route/reducer';
 
-/**
- * The configuration for redux-persist, to persist the settings to 
- * backing store.
- */
+/* Configuration for redux-persist */
 const persistConfig = {
   key: 'settings',
   storage,
-  whitelist: [ 'settings' ]
+  whitelist: [ 'display', 'filter', 'sortOrder' ]
 };
-const persistedReducer = persistReducer(persistConfig, appReducer);
+const rootReducer = combineReducers({
+  app: persistReducer(persistConfig, appReducer),
+  routes: routeReducer
+});
 
-/**
- * Middleware.
- */
-const middlewares = [];
-if (!jest) {
-  // Only turn on the logger if you need it
-  middlewares.push(createLogger({ collapsed: true }));
-}
-const middleware = applyMiddleware(...middlewares);
+/* Configure redux middleware */
+const loggerConfiguration = {
+  collapsed: true,
+  diff: true,
+  // Log only if not testing
+  predicate: () => (!jest)
+};
 
-/**
- * Create the Redux store.
- */
-const store = compose(middleware)(createStore)(persistedReducer);
+/* Apply Middleware to the store */
+const middleware = applyMiddleware(
+  createLogger(loggerConfiguration)
+);
+
+/* Create the redux store */
+export const store = compose(middleware)(createStore)(rootReducer);
 export const persistor = persistStore(store);
 
-export default store;
+/* Dispatch initialization actions */
+// TODO: Dispatch initialization actions

@@ -1,19 +1,14 @@
 export {
-  netClearError,
-  netSetError,
-  netStartRequest,
-  netStopRequest
-} from './modules/network/actions';
+  clearError,
+  setDisplay,
+  setError,
+  setFilter,
+  setSort,
+  startRequest,
+  stopRequest
+} from './modules/app/actions'
 
 export {
-  routesLoader
-} from './modules/routes/actions';
-
-/**
- * The Flux Standard Action type.
- */
-export type FluxAction = {
-  type: string;
-  error?: Error;
-  payload?: any;
-}
+  loadRoutes,
+  updateRoute
+} from './modules/route/actions'
