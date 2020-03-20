@@ -55,8 +55,8 @@ describe('services', () => {
       expect(actual).toBeInstanceOf(Array);
       expect(actual).toHaveLength(3);
       expect(actual.find((r) => r.routeId === route1.routeId)?.isCompleted).toStrictEqual(true);
-      expect(actual.find((r) => r.routeId === route2.routeId)?.isCompleted).toStrictEqual(false);
       expect(actual.find((r) => r.routeId === route2.routeId)?.isCompleted).toStrictEqual(true);
+      expect(actual.find((r) => r.routeId === route3.routeId)?.isCompleted).toStrictEqual(false);
     });
   });
 

@@ -153,8 +153,8 @@ describe('ZwiftRoute', () => {
         { id: '83b7ba95-2b19-409e-a220-bc7eae80287c', expected: true }, /* Crit City */
       ];
       const routeFilter: RouteFilter = {
-        includeCompletedRoutes: false,
-        includeEventOnlyRoutes: false,
+        includeCompletedRoutes: true,
+        includeEventOnlyRoutes: true,
         includeDefaultWorld: false
       };
 
@@ -179,8 +179,8 @@ describe('ZwiftRoute', () => {
       ];
       const routeFilter: RouteFilter = {
         world: 'London',
-        includeCompletedRoutes: false,
-        includeEventOnlyRoutes: false,
+        includeCompletedRoutes: true,
+        includeEventOnlyRoutes: true,
         includeDefaultWorld: true
       };
 
@@ -204,8 +204,8 @@ describe('ZwiftRoute', () => {
         { id: '83b7ba95-2b19-409e-a220-bc7eae80287c', expected: true }, /* Crit City */
       ];
       const routeFilter: RouteFilter = {
-        includeCompletedRoutes: false,
-        includeEventOnlyRoutes: false,
+        includeCompletedRoutes: true,
+        includeEventOnlyRoutes: true,
         includeDefaultWorld: true
       };
 
@@ -320,7 +320,7 @@ describe('ZwiftRoute', () => {
         { id: '83b7ba95-2b19-409e-a220-bc7eae80287c', expected: true }, /* Crit City */
       ];
       const routeFilter: RouteFilter = {
-        includeCompletedRoutes: false,
+        includeCompletedRoutes: true,
         includeEventOnlyRoutes: true,
         includeDefaultWorld: false
       };
@@ -345,8 +345,8 @@ describe('ZwiftRoute', () => {
         { id: '83b7ba95-2b19-409e-a220-bc7eae80287c', expected: false }, /* Crit City */
       ];
       const routeFilter: RouteFilter = {
-        includeCompletedRoutes: false,
-        includeEventOnlyRoutes: true,
+        includeCompletedRoutes: true,
+        includeEventOnlyRoutes: false,
         includeDefaultWorld: false
       };
 
@@ -397,7 +397,7 @@ describe('ZwiftRoute', () => {
         maximumZwiftLevel: 5
       };
       const actuals = routes.filter((r) => r.isMatch(routeFilter));
-      expect(actuals.length).toStrictEqual(43);
+      expect(actuals.length).toStrictEqual(32);
     });
   });
 });

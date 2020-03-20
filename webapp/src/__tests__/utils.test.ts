@@ -23,8 +23,8 @@ const sourceData = [
     distance: 8.2,
     elevation: 140,
     difficulty: 1.4,
-    leadin_distance: 0,
-    leadin_elevation: 0,
+    leadin_distance: 2.1,
+    leadin_elevation: 82.4,
     sports: "cycling",
     level: 0,
     eventonly: false,
@@ -34,9 +34,9 @@ const sourceData = [
   {
     world: "London",
     name: "Classique Reverse",
-    distance: 8.2,
-    elevation: 140,
-    difficulty: 1.4,
+    distance: 8.5,
+    elevation: 145,
+    difficulty: 1.6,
     leadin_distance: 0,
     leadin_elevation: 0,
     sports: "cycling",
@@ -55,7 +55,7 @@ describe('utils', () => {
         sortField: SortField.Difficulty, 
         sortDirection: SortDirection.Ascending
       });
-      const expected = [ 'sample3', 'sample2', 'sample1' ];
+      const expected = [ 'sample2', 'sample3', 'sample1' ];
       const actual = routes.sort(comparator).map((r) => r.id);
       expect(actual).toStrictEqual(expected);
     });
@@ -95,7 +95,7 @@ describe('utils', () => {
         sortField: SortField.RouteDistance, 
         sortDirection: SortDirection.Ascending
       });
-      const expected = [ 'sample3', 'sample2', 'sample1' ];
+      const expected = [ 'sample2', 'sample3', 'sample1' ];
       const actual = routes.sort(comparator).map((r) => r.id);
       expect(actual).toStrictEqual(expected);
     });
@@ -115,7 +115,7 @@ describe('utils', () => {
         sortField: SortField.RouteElevationGain, 
         sortDirection: SortDirection.Ascending
       });
-      const expected = [ 'sample3', 'sample2', 'sample1' ];
+      const expected = [ 'sample2', 'sample3', 'sample1' ];
       const actual = routes.sort(comparator).map((r) => r.id);
       expect(actual).toStrictEqual(expected);
     });
@@ -145,7 +145,7 @@ describe('utils', () => {
         sortField: SortField.TotalDistance, 
         sortDirection: SortDirection.Descending
       });
-      const expected = [ 'sample1', 'sample3', 'sample2' ];
+      const expected = [ 'sample1', 'sample2', 'sample3' ];
       const actual = routes.sort(comparator).map((r) => r.id);
       expect(actual).toStrictEqual(expected);
     });
@@ -165,7 +165,7 @@ describe('utils', () => {
         sortField: SortField.TotalElevationGain, 
         sortDirection: SortDirection.Descending
       });
-      const expected = [ 'sample1', 'sample3', 'sample2' ];
+      const expected = [ 'sample1', 'sample2', 'sample3' ];
       const actual = routes.sort(comparator).map((r) => r.id);
       expect(actual).toStrictEqual(expected);
     });
