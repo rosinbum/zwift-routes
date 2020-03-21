@@ -1,3 +1,4 @@
+/* eslint-env jest */
 import React from 'react';
 import { render, fireEvent, waitForElement } from '@testing-library/react';
 import { LoadingIndicator } from '../../../ui/components';

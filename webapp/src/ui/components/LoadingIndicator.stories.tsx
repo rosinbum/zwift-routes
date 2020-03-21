@@ -23,7 +23,7 @@ export const normal: React.SFC<{}> = () => (
 export const loading: React.SFC<{}> = () => (
   <AppBar>
     <Toolbar>
-      <Typography style={{ flexGrow: 1 }} variant="h6" noWrap>Normal</Typography>
+      <Typography style={{ flexGrow: 1 }} variant="h6" noWrap>Loading</Typography>
       <LoadingIndicator isLoading={true} />
     </Toolbar>
   </AppBar>
@@ -33,7 +33,7 @@ export const loading: React.SFC<{}> = () => (
 export const error: React.SFC<{}> = () => (
   <AppBar>
     <Toolbar>
-      <Typography style={{ flexGrow: 1 }} variant="h6" noWrap>Normal</Typography>
+      <Typography style={{ flexGrow: 1 }} variant="h6" noWrap>Error</Typography>
       <LoadingIndicator error={new Error('error message')} onClick={action('onClick')} />
     </Toolbar>
   </AppBar>
