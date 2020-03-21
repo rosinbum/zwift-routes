@@ -1,1 +1,2 @@
-export { default as LoadingOverlay } from './LoadingOverlay';
+export { default as LoadingIndicator } from './LoadingIndicator';
+export { default as LoadingOverlay   } from './LoadingOverlay';
