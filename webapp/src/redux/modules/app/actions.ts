@@ -1,5 +1,5 @@
-import { FluxAction } from '../../types';
-import { DisplaySettings, RouteFilter, SortOrder } from '../../../models';
+import { DisplaySettings, RouteFilter, SortOrder } from 'src/models';
+import { FluxAction } from 'src/redux/types';
 
 /* Enum to define the action types */
 export enum ActionType {

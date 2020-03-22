@@ -1,4 +1,4 @@
-import { ZwiftRoute } from "../../../models";
+import { ZwiftRoute } from "src/models";
 
 /**
  * State for the route store.

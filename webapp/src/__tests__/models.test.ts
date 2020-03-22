@@ -1,6 +1,6 @@
 /* eslint-env jest */
-import { ZwiftRoute, ZwiftSport, RouteFilter } from '../models';
-import staticData from '../services/data/routes.json';
+import { ZwiftRoute, ZwiftSport, RouteFilter } from 'src/models';
+import staticData from 'src/data/routes.json';
 
 describe('ZwiftRoute', () => {
   it('can be created with routes.json data', () => {

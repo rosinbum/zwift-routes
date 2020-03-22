@@ -1,6 +1,9 @@
 import DexieUserService from './DexieUserService';
 import ZwiftRouteService from './ZwiftRouteService';
 
+/* Re-export the types for this module */
+export { DexieUserService, ZwiftRouteService };
+
 /* The user data service singleton */
 export const userService = new DexieUserService();
 

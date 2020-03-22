@@ -1,7 +1,7 @@
 import React from 'react';
 import List from '@material-ui/core/List';
 import ZwiftRouteListItem from './ZwiftRouteListItem';
-import { ZwiftRoute, DisplayUnits } from '../../models';
+import { ZwiftRoute, DisplayUnits } from 'src/models';
 
 export interface ZwiftRouteListProps {
   /** Event handler called when the user clicks on a route */

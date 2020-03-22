@@ -1,8 +1,8 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
-import ZwiftRouteListItem from './ZwiftRouteListItem';
-import { DisplayUnits, ZwiftRoute } from '../../models';
-import staticData from '../../services/data/routes.json';
+import ZwiftRouteListItem from 'src/ui/components/ZwiftRouteListItem';
+import { DisplayUnits, ZwiftRoute } from 'src/models';
+import staticData from 'src/data/routes.json';
 
 export default {
   title: 'ZwiftRouteListItem'

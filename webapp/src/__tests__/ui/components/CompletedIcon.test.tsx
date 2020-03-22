@@ -1,7 +1,7 @@
 /* eslint-env jest */
 import React from 'react';
 import { render } from '@testing-library/react';
-import { CompletedIcon } from '../../../ui/components';
+import { CompletedIcon } from 'src/ui/components';
 
 describe('CompletedIcon', () => {
   it('displays not completed by default', () => {

@@ -1,4 +1,4 @@
-import { ZwiftUserData } from '../models';
+import { ZwiftUserData } from 'src/models';
 
 /**
  * The ZwiftUserService stores dynamic data about the routes that the user

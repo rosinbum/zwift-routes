@@ -1,7 +1,7 @@
-import { FluxAction } from '../../types';
+import { FluxAction } from 'src/redux/types';
 import { RouteActionTypes } from './actions';
 import RouteState from "./state";
-import { ZwiftRoute } from '../../../models';
+import { ZwiftRoute } from 'src/models';
 
 /* Initial state for the redux store */
 const initialState: RouteState = [];

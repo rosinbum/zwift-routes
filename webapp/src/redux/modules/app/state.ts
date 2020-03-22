@@ -1,4 +1,4 @@
-import { DisplaySettings, RouteFilter, SortOrder } from "../../../models";
+import { DisplaySettings, RouteFilter, SortOrder } from "src/models";
 
 /**
  * Definition of the state for this module

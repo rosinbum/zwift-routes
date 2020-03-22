@@ -1,10 +1,10 @@
 /* eslint-env jest */
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
-import { ZwiftRouteListItem } from '../../../ui/components';
-import { DisplayUnits, ZwiftRoute } from '../../../models';
-import { formatDistance } from '../../../utils';
-import staticData from '../../../services/data/routes.json';
+import { ZwiftRouteListItem } from 'src/ui/components';
+import { DisplayUnits, ZwiftRoute } from 'src/models';
+import { formatDistance } from 'src/utils';
+import staticData from 'src/data/routes.json';
 
 const allRoutes = staticData.map((r) => new ZwiftRoute(r));
 allRoutes[1].isCompleted = true;

@@ -1,4 +1,4 @@
-import { SortField, SortOrder, SortDirection, ZwiftRoute } from '../models';
+import { SortField, SortOrder, SortDirection, ZwiftRoute } from 'src/models';
 
 type ZwiftSortFn = (a: ZwiftRoute, b: ZwiftRoute) => number
 

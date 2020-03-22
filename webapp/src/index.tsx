@@ -2,10 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/es/integration/react';
-import { LoadingOverlay } from './ui/components';
-import { MainApplication } from './ui/containers';
-import { persistor, store } from './redux/store';
-import * as serviceWorker from './serviceWorker';
+import { LoadingOverlay } from 'src/ui/components';
+import { MainApplication } from 'src/ui/containers';
+import { persistor, store } from 'src/redux/store';
+import * as serviceWorker from 'src/serviceWorker';
 
 import './index.css';
 

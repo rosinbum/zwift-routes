@@ -1,6 +1,6 @@
 /* eslint-env jest */
-import * as utils from '../utils';
-import { DisplayUnits, ZwiftRoute, SortField, SortDirection } from '../models';
+import * as utils from 'src/utils';
+import { DisplayUnits, ZwiftRoute, SortField, SortDirection } from 'src/models';
 
 const sourceData = [
   {

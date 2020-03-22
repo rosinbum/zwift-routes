@@ -1,6 +1,6 @@
 import { ZwiftUserService } from './internal-types';
-import { ZwiftRoute, ZwiftRouteData } from '../models';
-import staticRouteData from './data/routes.json';
+import { ZwiftRoute, ZwiftRouteData } from 'src/models';
+import staticRouteData from 'src/data/routes.json';
 
 /**
  * Stores and retrieves the route data from the backing store(s).  The route

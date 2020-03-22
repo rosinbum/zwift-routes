@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { LoadingOverlay } from '../../../ui/components';
+import { LoadingOverlay } from 'src/ui/components';
 
 describe('LoadingOverlay', () => {
   // Snapshot test

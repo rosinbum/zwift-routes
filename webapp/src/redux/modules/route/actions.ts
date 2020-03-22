@@ -1,5 +1,5 @@
-import { FluxAction } from "../../types";
-import { ZwiftRoute } from "../../../models";
+import { FluxAction } from "src/redux/types";
+import { ZwiftRoute } from "src/models";
 
 export enum RouteActionTypes {
   LoadRoutes    = 'route.load-routes',

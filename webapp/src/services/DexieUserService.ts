@@ -1,6 +1,6 @@
-import { ZwiftUserService } from './internal-types';
-import { ZwiftUserData } from '../models';
 import Dexie from 'dexie';
+import { ZwiftUserService } from './internal-types';
+import { ZwiftUserData } from 'src/models';
 
 /**
  * Definition of dexie options

@@ -4,8 +4,8 @@ import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import ListItemText from '@material-ui/core/ListItemText';
 import Typography from '@material-ui/core/Typography';
 import CompletedIcon from './CompletedIcon';
-import { DisplayUnits, ZwiftRoute } from '../../models';
-import { formatDistance, formatElevationGain } from '../../utils';
+import { DisplayUnits, ZwiftRoute } from 'src/models';
+import { formatDistance, formatElevationGain } from 'src/utils';
 
 export interface ZwiftRouteListItemProps {
   /** What display units for distance and elevation gain */

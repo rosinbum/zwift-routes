@@ -1,12 +1,13 @@
 /* eslint-env jest */
-import { ZwiftRoute, ZwiftSport, DisplayUnits, SortDirection, SortField } from '../models';
-import { FluxAction } from '../redux/types';
-import { store, persistor } from '../redux/store';
-import staticData from '../services/data/routes.json';
-import appReducer from '../redux/modules/app/reducer';
-import AppState from '../redux/modules/app/state';
-import routeReducer from '../redux/modules/route/reducer';
-import * as actions from '../redux/actions';
+import { ZwiftRoute, ZwiftSport, DisplayUnits, SortDirection, SortField } from 'src/models';
+import { FluxAction } from 'src/redux/types';
+import staticData from 'src/data/routes.json';
+
+import { store, persistor } from 'src/redux/store';
+import appReducer from 'src/redux/modules/app/reducer';
+import AppState from 'src/redux/modules/app/state';
+import routeReducer from 'src/redux/modules/route/reducer';
+import * as actions from 'src/redux/actions';
 
 const invalidAction: FluxAction = { type: '@@invalid' };
 const allRoutes = staticData.map((r) => new ZwiftRoute(r));

@@ -1,8 +1,8 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
-import { DisplayUnits, ZwiftRoute } from '../../../models';
-import staticData from '../../../services/data/routes.json';
-import { ZwiftRouteList } from '../../../ui/components';
+import { DisplayUnits, ZwiftRoute } from 'src/models';
+import staticData from 'src/data/routes.json';
+import { ZwiftRouteList } from 'src/ui/components';
 
 const allRoutes = staticData.map((r) => new ZwiftRoute(r));
 allRoutes[1].isCompleted = true;

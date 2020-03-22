@@ -1,8 +1,6 @@
-import DexieUserService from '../services/DexieUserService';
-import ZwiftRouteService from '../services/ZwiftRouteService';
-import { ZwiftUserService } from '../services/internal-types';
-import { routeService, userService } from '../services';
-import { ZwiftRoute } from '../models';
+import { DexieUserService, ZwiftRouteService, routeService, userService } from 'src/services';
+import { ZwiftRoute } from 'src/models';
+
 const indexedDB = require('fake-indexeddb');
 
 let dbID = 0;
@@ -17,7 +15,7 @@ const route2 = { routeId: '70e64f35-d533-432f-9686-9eeff22fcc52', isCompleted: t
 const route3 = { routeId: '9fe7cb2d-7476-49bf-9ee3-175a2189bf49', isCompleted: false };
 
 /** Helper method to create a new user service with a mock indexedDB */
-const getUserService = (): ZwiftUserService => {
+const getUserService = (): DexieUserService => {
   const dbName = `${dbRoot}${dbID}`;
   dbID += 1;
   return new DexieUserService(dbName, indexedDB);

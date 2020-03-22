@@ -1,5 +1,5 @@
 import React from 'react';
-import CompletedIcon from './CompletedIcon';
+import CompletedIcon from 'src/ui/components/CompletedIcon';
 
 export default {
   title: 'CompletedIcon'

@@ -1,7 +1,7 @@
 /* eslint-env jest */
 import React from 'react';
 import { render, fireEvent, waitForElement } from '@testing-library/react';
-import { LoadingIndicator } from '../../../ui/components';
+import { LoadingIndicator } from 'src/ui/components';
 
 describe('LoadingIndicator', () => {
   it('is disabled by default', async () => {

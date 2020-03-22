@@ -1,12 +1,7 @@
-import { FluxAction } from '../../types';
+import { DisplayUnits, SortDirection, SortField, ZwiftSport } from 'src/models';
+import { FluxAction } from 'src/redux/types';
 import { ActionType } from './actions';
 import AppState from './state';
-import { 
-  DisplayUnits, 
-  SortDirection,
-  SortField, 
-  ZwiftSport
-} from '../../../models';
 
 const initialState: AppState = {
   requests: 0,
