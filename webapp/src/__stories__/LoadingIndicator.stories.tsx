@@ -3,7 +3,7 @@ import { action } from '@storybook/addon-actions';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import LoadingIndicator from 'src/ui/componentsonents/LoadingIndicatorgIndicator';
+import LoadingIndicator from 'src/ui/components/LoadingIndicator';
 
 export default {
   title: 'LoadingIndicator'
