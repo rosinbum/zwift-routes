@@ -3,7 +3,7 @@ import ZwiftRouteIcons from 'src/ui/components/ZwiftRouteIcons';
 import { ZwiftRouteData, ZwiftRoute } from 'src/models';
 
 export default {
-  title: 'ZwiftRouteIcons'
+  title: 'Components/ZwiftRouteIcons'
 };
 
 const routeInfo: ZwiftRouteData = {

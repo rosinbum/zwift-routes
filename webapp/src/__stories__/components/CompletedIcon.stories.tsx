@@ -2,7 +2,7 @@ import React from 'react';
 import CompletedIcon from 'src/ui/components/CompletedIcon';
 
 export default {
-  title: 'CompletedIcon'
+  title: 'Components/CompletedIcon'
 };
 
 // Sub-story - normal usage

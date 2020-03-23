@@ -6,7 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import LoadingIndicator from 'src/ui/components/LoadingIndicator';
 
 export default {
-  title: 'LoadingIndicator'
+  title: 'Components/LoadingIndicator'
 };
 
 // Sub-story - normal usage

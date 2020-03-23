@@ -2,7 +2,7 @@ import React from 'react';
 import WorldBadge from 'src/ui/components/WorldBadge';
 
 export default {
-  title: 'WorldBadge'
+  title: 'Components/WorldBadge'
 };
 
 // Sub-story - Bologna

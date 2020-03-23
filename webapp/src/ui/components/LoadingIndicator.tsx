@@ -63,7 +63,7 @@ const LoadingIndicator: React.SFC<LoadingIndicatorProps> = (
         </IconButton>
         <Dialog onClose={closeDialogHandler} open={dialogIsOpen}>
           <DialogTitle data-testid="dialog-title">Error</DialogTitle>
-          <DialogContent dividers>
+          <DialogContent dividers style={{ minWidth: '300px' }}>
             <Typography gutterBottom>{error?.message}</Typography>
           </DialogContent>
           <DialogActions>

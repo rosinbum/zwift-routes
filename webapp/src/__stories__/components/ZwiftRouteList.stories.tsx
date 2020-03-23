@@ -5,7 +5,7 @@ import { DisplayUnits, ZwiftRoute } from 'src/models';
 import staticData from 'src/data/routes.json';
 
 export default {
-  title: 'ZwiftRouteList'
+  title: 'Components/ZwiftRouteList'
 };
 
 const allRoutes = staticData.map((r) => new ZwiftRoute(r));

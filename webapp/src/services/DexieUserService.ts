@@ -19,6 +19,8 @@ class ZwiftUserDatabase extends Dexie {
   routeState: Dexie.Table<ZwiftUserData, string>;
 
   constructor(databaseName: string, options: DexieOptions) {
+    // If options.indexedDB isn't given, then make sure it is gone!
+    if (!options.indexedDB) delete options.indexedDB;
     super(databaseName, options);
     this.version(1).stores({
       routeState: '&routeId,isCompleted'

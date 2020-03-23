@@ -1,3 +1,6 @@
+import AppState from './modules/app/state';
+import RouteState from './modules/route/state';
+
 /**
  * Defines a Flux Standard Action
  */
@@ -10,4 +13,12 @@ export interface FluxAction {
 
   /** If this action has a payload, then provide the payload */
   payload?: any;
+}
+
+/**
+ * Defines the Store state
+ */
+export interface ReduxState {
+  app: AppState;
+  routes: RouteState;
 }
