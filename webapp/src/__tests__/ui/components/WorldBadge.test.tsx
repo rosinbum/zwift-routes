@@ -1,3 +1,4 @@
+/* eslint-env jest */
 import React from 'react';
 import { render } from '@testing-library/react';
 import WorldBadge from 'src/ui/components/WorldBadge';

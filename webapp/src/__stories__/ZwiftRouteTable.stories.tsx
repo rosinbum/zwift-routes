@@ -8,7 +8,7 @@ export default {
 };
 
 const allRoutes = staticData.map((r) => new ZwiftRoute(r));
-const route = allRoutes.find((r) => r.id === '26eaf3f2-ba6e-436e-a050-fc65c38ecbb2');
+const route = allRoutes[8];
 
 // Sub-story - imperial display
 export const imperial: React.SFC<{}> = () => (

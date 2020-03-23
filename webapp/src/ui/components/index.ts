@@ -2,6 +2,7 @@ export { default as CompletedIcon       } from './CompletedIcon';
 export { default as LoadingIndicator    } from './LoadingIndicator';
 export { default as LoadingOverlay      } from './LoadingOverlay';
 export { default as WorldBadge          } from './WorldBadge';
+export { default as ZwiftRouteIcons     } from './ZwiftRouteIcons';
 export { default as ZwiftRouteList      } from './ZwiftRouteList';
 export { default as ZwiftRouteListItem  } from './ZwiftRouteListItem';
 export { default as ZwiftRouteTable     } from './ZwiftRouteTable';
