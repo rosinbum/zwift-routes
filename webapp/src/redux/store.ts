@@ -1,5 +1,6 @@
 import { applyMiddleware, compose, createStore, combineReducers } from 'redux';
 import { createLogger } from 'redux-logger';
+import thunkMiddleware from 'redux-thunk';
 import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 import appReducer from './modules/app/reducer';
@@ -28,7 +29,8 @@ const loggerConfiguration = {
 
 /* Apply Middleware to the store */
 const middleware = applyMiddleware(
-  createLogger(loggerConfiguration)
+  createLogger(loggerConfiguration),
+  thunkMiddleware
 );
 
 /* Create the redux store */

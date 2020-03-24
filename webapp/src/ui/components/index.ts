@@ -1,4 +1,7 @@
 export { default as CompletedIcon       } from './CompletedIcon';
+export { default as FormDisplay         } from './FormDisplay';
+export { default as FormFilter          } from './FormFilter';
+export { default as FormSortOrder       } from './FormSortOrder';
 export { default as LoadingIndicator    } from './LoadingIndicator';
 export { default as LoadingOverlay      } from './LoadingOverlay';
 export { default as WorldBadge          } from './WorldBadge';

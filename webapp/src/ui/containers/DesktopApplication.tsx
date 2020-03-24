@@ -2,20 +2,29 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Switch, Route, useHistory, useParams } from 'react-router-dom';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
+import CloseIcon from '@material-ui/icons/CloseOutlined';
+import Dialog from '@material-ui/core/Dialog';
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogTitle from '@material-ui/core/DialogTitle';
 import Drawer from '@material-ui/core/Drawer';
-import StatisticsIcon from '@material-ui/icons/EmojiEvents';
+import IconButton from '@material-ui/core/IconButton';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
+import StatisticsIcon from '@material-ui/icons/EmojiEvents';
+import Typography from '@material-ui/core/Typography';
 import MasterDetailContainer from './desktop/MasterDetailContainer';
 import RouteDetails from './desktop/RouteDetails';
 import RouteStatistics from './desktop/RouteStatistics';
 import TopApplicationBar from './desktop/TopApplicationBar';
-import { ZwiftRouteList } from 'src/ui/components';
+import { FormDisplay, FormFilter, FormSortOrder, ZwiftRouteList } from 'src/ui/components';
 import { ReduxState } from 'src/redux/types';
 import { getComparator } from 'src/utils';
-import { clearError } from 'src/redux/actions';
+import { DisplaySettings, RouteFilter, SortOrder } from 'src/models';
+import * as actions from 'src/redux/actions'; 
 
 const drawerWidth = 240;
 
@@ -47,7 +56,17 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     marginTop: '64px',
     width: drawerWidth
   },
-  drawer: theme.mixins.toolbar
+  drawer: theme.mixins.toolbar,
+  dialogTitle: {
+    margin: 0,
+    padding: theme.spacing(2)
+  },
+  dialogClose: {
+    position: 'absolute',
+    right: theme.spacing(1),
+    top: theme.spacing(1),
+    color: theme.palette.grey[500]
+  }
 }));
 
 /**
@@ -61,6 +80,7 @@ const DesktopApplication: React.SFC<{}> = () => {
   const dispatch = useDispatch();
   const history = useHistory();
   const [drawerIsOpen, setDrawer] = React.useState(false);
+  const [settingsIsOpen, setSettings] = React.useState(false);
   const appState = useSelector((state: ReduxState) => state.app);
   const routes = useSelector((state: ReduxState) => state.routes);
 
@@ -68,18 +88,8 @@ const DesktopApplication: React.SFC<{}> = () => {
     .filter((r) => r.isMatch(appState.filter))
     .sort(getComparator(appState.sortOrder));
 
-  const openDrawer = (): void => { 
-    setDrawer(true);  
-  };
-
-  const openSettings = (): void => { /* TODO: Do nothing */ }
-
-  const closeDrawer = (): void => { 
-    setDrawer(false); 
-  };
-
   const acknowledgeError = (): void => { 
-    dispatch(clearError()); 
+    dispatch(actions.clearError()); 
   };
 
   const goToPage = (route: string) => (): void => {
@@ -89,6 +99,18 @@ const DesktopApplication: React.SFC<{}> = () => {
 
   const goToDetails = (id: string): void => {
     history.replace(`/details/${id}`);
+  };
+
+  const updateDisplaySettings = (displaySettings: DisplaySettings): void => {
+    dispatch(actions.setDisplay(displaySettings));
+  };
+
+  const updateRouteFilter = (filter: RouteFilter): void => {
+    dispatch(actions.setFilter(filter));
+  };
+
+  const updateSortOrder = (sortOrder: SortOrder): void => {
+    dispatch(actions.setSort(sortOrder));
   };
 
   const masterComponent = (
@@ -101,8 +123,22 @@ const DesktopApplication: React.SFC<{}> = () => {
   const Details: React.SFC<{}> = () => {
     const { id } = useParams();
     const route = routes.find((r) => r.id === id);
+    
+    const markCompleted = (isCompleted: boolean): void => {
+      if (route) {
+        route.isCompleted = isCompleted;
+        dispatch(actions.updateRoute(route));
+      }
+    };
+
     if (route) {
-      return (<RouteDetails displayUnits={appState.display.units} route={route} />);
+      return (
+        <RouteDetails 
+          displayUnits={appState.display.units} 
+          onCompletedChanged={markCompleted}
+          route={route} 
+        />
+      );
     }
     return (<div>An error occurred: id = {id}</div>);
   };
@@ -115,8 +151,8 @@ const DesktopApplication: React.SFC<{}> = () => {
             isBusy={appState.requests > 0}
             error={appState.error}
             onAcknowledgeError={acknowledgeError}
-            onOpenMenu={openDrawer} 
-            onOpenSettings={openSettings}
+            onOpenMenu={() => setDrawer(true)} 
+            onOpenSettings={() => setSettings(true)}
           />
         </div>
         <div className={styles.mainContent}>
@@ -129,7 +165,7 @@ const DesktopApplication: React.SFC<{}> = () => {
           </MasterDetailContainer>
         </div>
       </div>
-      <Drawer classes={{ paper: styles.drawerPaper }} anchor="left" open={drawerIsOpen} onClose={closeDrawer}>
+      <Drawer classes={{ paper: styles.drawerPaper }} anchor="left" open={drawerIsOpen} onClose={() => setDrawer(false)}>
         <div className={styles.drawer}>
           <List>
             <ListItem button onClick={goToPage('/stats')} key="menu1">
@@ -139,6 +175,24 @@ const DesktopApplication: React.SFC<{}> = () => {
           </List>
         </div>
       </Drawer>
+      <Dialog onClose={() => setSettings(false)} open={settingsIsOpen}>
+        <DialogTitle disableTypography className={styles.dialogTitle}>
+          <Typography variant="h6">Settings</Typography>
+          <IconButton className={styles.dialogClose} onClick={() => setSettings(false)}>
+            <CloseIcon />
+          </IconButton>
+        </DialogTitle>
+        <DialogContent dividers>
+          <FormFilter routes={routes} filter={appState.filter} onUpdate={updateRouteFilter} />
+          <FormSortOrder sortOrder={appState.sortOrder} onUpdate={updateSortOrder} />
+          <FormDisplay displaySettings={appState.display} onUpdate={updateDisplaySettings} />
+        </DialogContent>
+        <DialogActions>
+          <Button autoFocus onClick={() => setSettings(false)} color="primary">
+            OK
+          </Button>
+        </DialogActions>
+      </Dialog>
     </>
   );
 };

@@ -33,6 +33,7 @@ export enum SortField {
  * List of potential sports that can be done on Zwift.
  */
 export enum ZwiftSport {
+  AllSports           = '*',
   Cycling             = 'cycling',
   Running             = 'running'
 }
@@ -154,13 +155,13 @@ export class ZwiftRoute {
    * @returns true if it is to be included; false if excluded.
    */
   isMatch(filter: RouteFilter): boolean {
-    if (filter.world) {
+    if (filter.world && filter.world !== '*') {
       const worldSet = [ filter.world ];
       if (filter.includeDefaultWorld) worldSet.push('Watopia');
       if (!worldSet.includes(this.zwiftWorld)) return false;
     }
 
-    if (filter.sport) {
+    if (filter.sport && filter.sport !== ZwiftSport.AllSports) {
       if (filter.sport === ZwiftSport.Cycling && !this.isForCycling) return false;
       if (filter.sport === ZwiftSport.Running && !this.isForRunning) return false;
     }

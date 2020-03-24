@@ -2,7 +2,7 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
 import RouteDetails from 'src/ui/containers/desktop/RouteDetails';
-import { ZwiftRoute, DisplayUnits } from 'src/models';
+import { ZwiftRoute } from 'src/models';
 import routeData from 'src/data/routes.json';
 
 describe('desktop', () => {

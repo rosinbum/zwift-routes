@@ -89,7 +89,7 @@ describe('redux', () => {
     });
 
     it('can create a updateRoute action', () => {
-      const actual = actions.updateRoute(allRoutes[0]);
+      const actual = actions.updateRouteInStore(allRoutes[0]);
       expect(actual.type).toStrictEqual('route.update-route');
       expect(actual.payload).toBeInstanceOf(ZwiftRoute);
       expect(actual.payload.id).toStrictEqual(allRoutes[0].id);
@@ -195,7 +195,7 @@ describe('redux', () => {
     });
 
     it('can handle replaceRoute with an invalid route', () => {
-      const action = actions.updateRoute(new ZwiftRoute(sampleData));
+      const action = actions.updateRouteInStore(new ZwiftRoute(sampleData));
       const actual = routeReducer(allRoutes, action);
       expect(actual).toBeInstanceOf(Array);
       expect(actual).toStrictEqual(allRoutes);
@@ -204,7 +204,7 @@ describe('redux', () => {
     it('can handle replaceRoute with a valid route', () => {
       const routeToBeUpdated = new ZwiftRoute(staticData[10]);
       routeToBeUpdated.isCompleted = true;
-      const actual = routeReducer(allRoutes, actions.updateRoute(routeToBeUpdated));
+      const actual = routeReducer(allRoutes, actions.updateRouteInStore(routeToBeUpdated));
       expect(actual).toBeInstanceOf(Array);
       expect(actual).not.toStrictEqual(allRoutes);
       const updatedRoute = actual.find((r) => r.id === routeToBeUpdated.id);
