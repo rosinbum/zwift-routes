@@ -19,7 +19,7 @@ const routeInfo: ZwiftRouteData = {
   world: 'Watopia'
 };
 
-const style = { backgroundColor: 'blue', width: '150px' };
+const style = { backgroundColor: 'blue', color: 'white', width: '150px' };
 
 export const cycling: React.SFC<{}> = () => {
   const route = new ZwiftRoute({ ...routeInfo, sports: 'cycling' });
