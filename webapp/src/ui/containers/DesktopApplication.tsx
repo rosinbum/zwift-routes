@@ -100,10 +100,9 @@ const DesktopApplication: React.SFC<{}> = () => {
 
   const Details: React.SFC<{}> = () => {
     const { id } = useParams();
-    const routes = useSelector((state: ReduxState) => state.routes);
     const route = routes.find((r) => r.id === id);
     if (route) {
-      return (<RouteDetails route={route} />);
+      return (<RouteDetails displayUnits={appState.display.units} route={route} />);
     }
     return (<div>An error occurred: id = {id}</div>);
   };

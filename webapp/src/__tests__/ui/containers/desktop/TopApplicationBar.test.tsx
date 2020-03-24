@@ -1,6 +1,6 @@
 /* eslint-env jest */
 import React from 'react';
-import { render, fireEvent, waitForElement } from '@testing-library/react';
+import { render, fireEvent } from '@testing-library/react';
 import TopApplicationBar from 'src/ui/containers/desktop/TopApplicationBar';
 
 describe('desktop', () => {

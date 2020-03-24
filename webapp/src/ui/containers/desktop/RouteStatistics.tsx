@@ -45,11 +45,11 @@ const updateStats = (obj: RouteStats, route: ZwiftRoute): void => {
 }
 
 export interface RouteStatisticsProps {
-  routes: ZwiftRoute[]
+  routes: ZwiftRoute[];
 }
 
 const RouteStatistics: React.SFC<RouteStatisticsProps> = 
-  ({ routes }) => {
+  ({ routes }: RouteStatisticsProps) => {
     const styles = useStyles();
     const worlds = uniq(routes.map((r) => r.zwiftWorld)).sort();
 

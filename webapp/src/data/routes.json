@@ -219,6 +219,7 @@
       "sports": "all",
       "level": 10,
       "eventonly": true,
+      "link": "https://zwiftinsider.com/jungle-circuit/",
       "id": "ca2be7c6-48f6-436f-8988-ac9b1e8fa50c",
       "difficulty": 0
     },
@@ -1593,7 +1594,7 @@
       "sports": "all",
       "level": 0,
       "eventonly": false,
-      "link": "https://zwift.com/news/17214-introducing-yorkshire",
+      "link": "https://zwiftinsider.com/harrogate-circuit/",
       "id": "29c88eb0-06f9-4fa3-bb02-643fac93dc37"
     },
     {
@@ -1607,7 +1608,7 @@
       "sports": "all",
       "level": 0,
       "eventonly": false,
-      "link": "https://zwift.com/news/17214-introducing-yorkshire",
+      "link": "https://zwiftinsider.com/duchy-estate/",
       "id": "4d332d06-d4a9-4108-bbf4-c47f88b096ab"
     },
     {
@@ -1621,7 +1622,7 @@
       "sports": "all",
       "level": 0,
       "eventonly": false,
-      "link": "https://zwift.com/news/17214-introducing-yorkshire",
+      "link": "https://zwiftinsider.com/queens-highway/",
       "id": "ba14d7bf-4fc1-4eae-8029-3f5fc4f36956"
     },
     {
@@ -1635,7 +1636,7 @@
       "sports": "all",
       "level": 0,
       "eventonly": false,
-      "link": "https://zwift.com/news/17214-introducing-yorkshire",
+      "link": "https://zwiftinsider.com/tour-of-tewit-well/",
       "id": "5bf308b9-a24f-41c0-b45c-e96ff32dacbd"
     },
     {
@@ -1649,7 +1650,7 @@
       "sports": "all",
       "level": 0,
       "eventonly": false,
-      "link": "https://zwift.com/news/17214-introducing-yorkshire",
+      "link": "https://zwiftinsider.com/royal-pump-room-8/",
       "id": "32855dd3-12ef-4c3c-92bc-5b214fb39c5d"
     },
     {
@@ -1663,7 +1664,7 @@
       "sports": "all",
       "level": 0,
       "eventonly": true,
-      "link": "https://zwift.com/news/17214-introducing-yorkshire",
+      "link": "https://zwiftinsider.com/harrogate-circuit/",
       "id": "f58d99fe-3e71-4f7d-a08a-370e0493631a"
     },
     {

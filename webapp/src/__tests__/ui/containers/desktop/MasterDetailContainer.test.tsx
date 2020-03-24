@@ -1,6 +1,6 @@
 /* eslint-env jest */
 import React from 'react';
-import { render, fireEvent, waitForElement } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import MasterDetailContainer from 'src/ui/containers/desktop/MasterDetailContainer';
 
 describe('desktop', () => {

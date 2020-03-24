@@ -59,4 +59,18 @@ describe('ZwiftRouteIcons', () => {
 
     expect(queryByTestId("running-icon")).toBeNull();
   });
+
+  it('displays the running icon when minimum zwift level', () => {
+    const route = new ZwiftRoute({...routeInfo, level: 10});
+    const { queryByTestId } = render(<ZwiftRouteIcons route={route} />);
+
+    expect(queryByTestId("level-icon")).not.toBeNull();
+  });
+
+  it('doesn\'t display the running icon when no minimum zwift level', () => {
+    const route = new ZwiftRoute({...routeInfo, level: 0});
+    const { queryByTestId } = render(<ZwiftRouteIcons route={route} />);
+
+    expect(queryByTestId("level-icon")).toBeNull();
+  });
 });
