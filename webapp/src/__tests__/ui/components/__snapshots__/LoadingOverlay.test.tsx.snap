@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoadingOverlay should render like the snapshot 1`] = `
+<div>
+  <div
+    class="makeStyles-root-1"
+  >
+    <div
+      class="circle__Wrapper-sc-16bbsoy-0 fjQiTc"
+      color="#fff"
+      size="64"
+    />
+  </div>
+</div>
+`;
