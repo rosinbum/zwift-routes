@@ -46,10 +46,11 @@ const updateStats = (obj: RouteStats, route: ZwiftRoute): void => {
 
 export interface RouteStatisticsProps {
   routes: ZwiftRoute[];
+  title?: boolean;
 }
 
 const RouteStatistics: React.SFC<RouteStatisticsProps> = 
-  ({ routes }: RouteStatisticsProps) => {
+  ({ routes, title = true }: RouteStatisticsProps) => {
     const styles = useStyles();
     const worlds = uniq(routes.map((r) => r.zwiftWorld)).sort();
 
@@ -72,10 +73,14 @@ const RouteStatistics: React.SFC<RouteStatisticsProps> =
     const scoreStats = (stats: RouteStats): string => {
       return stats.completedScore.toFixed(2);
     };
+
+    const titleComponent = title 
+      ? <Typography align="center" variant="h5">Route Statistics</Typography>
+      : (<span />);
     
     return (
       <div className={styles.root}>
-        <Typography align="center" variant="h5">Route Statistics</Typography>
+        {titleComponent}
         <TableContainer component={Paper} className={styles.table}>
           <Table>
             <TableHead>
