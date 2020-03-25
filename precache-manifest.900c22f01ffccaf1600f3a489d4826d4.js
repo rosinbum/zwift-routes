@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a41cfe332a7001450838b1c34116c89c",
+    "revision": "2198de1a66ba157aa5f42c54d2c5299f",
     "url": "/zwift-routes/index.html"
   },
   {
-    "revision": "d8491458daa20618797d",
-    "url": "/zwift-routes/static/css/main.bfe5faca.chunk.css"
+    "revision": "b3fc97bde8008ba2ab22",
+    "url": "/zwift-routes/static/css/main.2c4d1816.chunk.css"
   },
   {
-    "revision": "ef3bde3100e2d94cb5e7",
-    "url": "/zwift-routes/static/js/2.895ffccb.chunk.js"
+    "revision": "9930d748965a385fff23",
+    "url": "/zwift-routes/static/js/2.25bf0732.chunk.js"
   },
   {
-    "revision": "ac9fac6c8e755a8efecd01981adb88e6",
-    "url": "/zwift-routes/static/js/2.895ffccb.chunk.js.LICENSE.txt"
+    "revision": "28164e9e1f7b49ce7422bf240655ba5b",
+    "url": "/zwift-routes/static/js/2.25bf0732.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d8491458daa20618797d",
-    "url": "/zwift-routes/static/js/main.a3b0e3a3.chunk.js"
+    "revision": "b3fc97bde8008ba2ab22",
+    "url": "/zwift-routes/static/js/main.3ed8ca69.chunk.js"
   },
   {
-    "revision": "7bf7bca241b8fcec2e64",
-    "url": "/zwift-routes/static/js/runtime-main.57935fb7.js"
+    "revision": "336cfac54433154d7f0d",
+    "url": "/zwift-routes/static/js/runtime-main.1b73825d.js"
   },
   {
     "revision": "b20b41b5d8faa65ea6add64ed3de1589",

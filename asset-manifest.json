@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/zwift-routes/static/css/main.bfe5faca.chunk.css",
-    "main.js": "/zwift-routes/static/js/main.a3b0e3a3.chunk.js",
-    "main.js.map": "/zwift-routes/static/js/main.a3b0e3a3.chunk.js.map",
-    "runtime-main.js": "/zwift-routes/static/js/runtime-main.57935fb7.js",
-    "runtime-main.js.map": "/zwift-routes/static/js/runtime-main.57935fb7.js.map",
-    "static/js/2.895ffccb.chunk.js": "/zwift-routes/static/js/2.895ffccb.chunk.js",
-    "static/js/2.895ffccb.chunk.js.map": "/zwift-routes/static/js/2.895ffccb.chunk.js.map",
+    "main.css": "/zwift-routes/static/css/main.2c4d1816.chunk.css",
+    "main.js": "/zwift-routes/static/js/main.3ed8ca69.chunk.js",
+    "main.js.map": "/zwift-routes/static/js/main.3ed8ca69.chunk.js.map",
+    "runtime-main.js": "/zwift-routes/static/js/runtime-main.1b73825d.js",
+    "runtime-main.js.map": "/zwift-routes/static/js/runtime-main.1b73825d.js.map",
+    "static/js/2.25bf0732.chunk.js": "/zwift-routes/static/js/2.25bf0732.chunk.js",
+    "static/js/2.25bf0732.chunk.js.map": "/zwift-routes/static/js/2.25bf0732.chunk.js.map",
     "index.html": "/zwift-routes/index.html",
-    "precache-manifest.c482799c0e0f15e18615ed031550d01a.js": "/zwift-routes/precache-manifest.c482799c0e0f15e18615ed031550d01a.js",
+    "precache-manifest.900c22f01ffccaf1600f3a489d4826d4.js": "/zwift-routes/precache-manifest.900c22f01ffccaf1600f3a489d4826d4.js",
     "service-worker.js": "/zwift-routes/service-worker.js",
-    "static/css/main.bfe5faca.chunk.css.map": "/zwift-routes/static/css/main.bfe5faca.chunk.css.map",
-    "static/js/2.895ffccb.chunk.js.LICENSE.txt": "/zwift-routes/static/js/2.895ffccb.chunk.js.LICENSE.txt",
+    "static/css/main.2c4d1816.chunk.css.map": "/zwift-routes/static/css/main.2c4d1816.chunk.css.map",
+    "static/js/2.25bf0732.chunk.js.LICENSE.txt": "/zwift-routes/static/js/2.25bf0732.chunk.js.LICENSE.txt",
     "static/media/CritCity.png": "/zwift-routes/static/media/CritCity.b20b41b5.png",
     "static/media/Default.png": "/zwift-routes/static/media/Default.964b675c.png",
     "static/media/London.png": "/zwift-routes/static/media/London.01df692c.png",
@@ -19,9 +19,9 @@
     "static/media/Watopia.png": "/zwift-routes/static/media/Watopia.e5ad7e91.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.57935fb7.js",
-    "static/js/2.895ffccb.chunk.js",
-    "static/css/main.bfe5faca.chunk.css",
-    "static/js/main.a3b0e3a3.chunk.js"
+    "static/js/runtime-main.1b73825d.js",
+    "static/js/2.25bf0732.chunk.js",
+    "static/css/main.2c4d1816.chunk.css",
+    "static/js/main.3ed8ca69.chunk.js"
   ]
 }
